@@ -1,0 +1,27 @@
+{
+    "name": "@startup/config",
+    "version": "1.0.0",
+    "private": true,
+    "main": "./index.ts",
+    "types": "./index.ts",
+    "exports": {
+        ".": {
+            "types": "./index.ts",
+            "import": "./index.ts",
+            "require": "./index.ts"
+        },
+        "./site": {
+            "types": "./site.config.ts",
+            "import": "./site.config.ts",
+            "require": "./site.config.ts"
+        },
+        "./metadata": {
+            "types": "./metadata.ts",
+            "import": "./metadata.ts",
+            "require": "./metadata.ts"
+        }
+    },
+    "peerDependencies": {
+        "next": ">=14.0.0"
+    }
+}
