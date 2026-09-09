@@ -58,9 +58,9 @@ const footerLinks = [
         links: [
             { href: "/terms", label: "Terms of service" },
             { href: "/privacy", label: "Privacy policy" },
+            { href: "/delete-account", label: "Delete account" },
             { href: "#", label: "Cookie notice" },
             { href: "#", label: "Trust center" },
-            { href: "#", label: "Cookie preferences" },
         ],
     },
 ];

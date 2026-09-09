@@ -60,6 +60,10 @@ export const PAGES_METADATA = {
             title: "Explore",
             description: "Explore MotionCore",
         } as Metadata,
+        deleteAccount: {
+            title: "Delete Account & Data",
+            description: "Request permanent deletion of your MotionCore account and associated data.",
+        } as Metadata,
         home: {
             title: "Home",
             description: "The adaptive training app for people who actually show up",
