@@ -360,6 +360,10 @@ export const PrivacyClient = () => {
                                             <div className="h-1.5 w-1.5 rounded-full bg-primary mt-2.5 shrink-0" />
                                             <span><strong>Authentication:</strong> Secure authentication providers (Google Sign-In, Apple ID) to authenticate user identity securely.</span>
                                         </li>
+                                        <li className="flex gap-3">
+                                            <div className="h-1.5 w-1.5 rounded-full bg-primary mt-2.5 shrink-0" />
+                                            <span><strong>In-App Advertising (Google AdMob):</strong> We use Google AdMob to deliver advertisements within the mobile application. Google AdMob may collect and process pseudonymous identifiers (such as the Android Advertising ID / AAID), device diagnostics, and ad interaction metrics to deliver, personalize, and measure advertisements in compliance with Google Play Developer Policies. You can reset or restrict personalized ad tracking at any time via your device settings (Settings &gt; Google &gt; Ads).</span>
+                                        </li>
                                     </ul>
                                 </section>
 
