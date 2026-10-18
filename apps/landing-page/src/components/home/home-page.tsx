@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { MotionConfig, motion } from "framer-motion";
 import {
     Activity,
     ArrowRight,
@@ -53,17 +53,20 @@ const fadeUp = {
 
 export function HomePage({ locale, home, common }: Props) {
     return (
-        <main id="main" className="relative w-full overflow-hidden">
-            <BackgroundGlow />
-            <HeroSection locale={locale} hero={home.hero} common={common} />
-            <TrustRibbon items={home.ribbon} />
-            <ShowcaseSection locale={locale} showcase={home.showcase} />
-            <FeatureGridSection features={home.features} />
-            <PrivacySection locale={locale} privacy={home.privacy} />
-            <HowItWorksSection steps={home.steps} />
-            <FaqSection locale={locale} faq={home.faq} />
-            <FinalCtaSection locale={locale} cta={home.cta} common={common} />
-        </main>
+        // Visitors who ask for reduced motion get fades without movement.
+        <MotionConfig reducedMotion="user">
+            <main id="main" className="relative w-full overflow-hidden">
+                <BackgroundGlow />
+                <HeroSection locale={locale} hero={home.hero} common={common} />
+                <TrustRibbon items={home.ribbon} />
+                <ShowcaseSection locale={locale} showcase={home.showcase} />
+                <FeatureGridSection features={home.features} />
+                <PrivacySection locale={locale} privacy={home.privacy} />
+                <HowItWorksSection steps={home.steps} />
+                <FaqSection locale={locale} faq={home.faq} />
+                <FinalCtaSection locale={locale} cta={home.cta} common={common} />
+            </main>
+        </MotionConfig>
     );
 }
 
@@ -94,7 +97,7 @@ const HeroSection = ({ locale, hero, common }: { locale: Locale; hero: Home["her
                 >
                     <motion.span
                         variants={fadeUp}
-                        className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium uppercase tracking-widest text-primary"
+                        className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-[11px] font-medium uppercase tracking-wider text-primary sm:text-xs sm:tracking-widest"
                     >
                         <ScanLine className="size-3.5" />
                         {hero.eyebrow}
@@ -127,7 +130,8 @@ const HeroSection = ({ locale, hero, common }: { locale: Locale; hero: Home["her
                             <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" />
                         </Link>
                     </motion.div>
-                    <motion.p variants={fadeUp} className="mt-4 text-xs uppercase tracking-widest text-muted-foreground">
+                    {/* Not uppercased: Turkish casing would turn "Android" into "ANDROİD". */}
+                    <motion.p variants={fadeUp} className="mt-4 text-sm text-muted-foreground">
                         {common.availability}
                     </motion.p>
                 </motion.div>
@@ -318,7 +322,7 @@ const ShowcaseSection = ({ locale, showcase }: { locale: Locale; showcase: Home[
 
                 <BentoCard className="md:col-span-2">
                     <div className="flex h-full flex-col">
-                        <SceneImage src="/images/scenes/throne.webp" className="h-40 rounded-none" position="center 55%" />
+                        <SceneImage src="/images/scenes/throne.webp" className="h-44 shrink-0 rounded-none" position="center 46%" />
                         <SmallCard icon={<Trophy className="mt-0.5 size-6 flex-shrink-0 text-primary" />} card={showcase.leaderboard} />
                     </div>
                 </BentoCard>
