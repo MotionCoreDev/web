@@ -20,7 +20,7 @@ export default async function DeleteAccountPage({ params }: PageProps) {
 
     return (
         <main id="main" className="w-full">
-            <PageHero eyebrow={deletion.app} title={deletion.title}>
+            <PageHero eyebrow={deletion.app} eyebrowAsWritten title={deletion.title}>
                 <p>{deletion.intro}</p>
             </PageHero>
 
