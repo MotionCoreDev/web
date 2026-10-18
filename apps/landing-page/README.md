@@ -1,69 +1,73 @@
-<h1 align="start">
-  KickCV - AI Powered Website Builder
-</h1>
+# MotionCore website
 
-<img width="1280" alt="KickCV Thumbnail" src="https://github.com/user-attachments/assets/8d11fc9c-8220-4d36-a0e3-271b73a7f23d">
+The public site for the MotionCore app: landing page, support, account deletion, privacy policy and
+terms of use, in English, Turkish, German and Spanish. It is a static Next.js export hosted on
+Netlify's free plan.
 
+## Pages
 
-## Introduction
+Every page exists once per language under `/en`, `/tr`, `/de` and `/es`:
 
-KickCV is a modern, fully responsive website built with a powerful tech stack. This project showcases the use of Next.js for server-side rendering, TailwindCSS for sleek styling, shadcn UI for elegant components, and Clerk for secure authentication.
+| Path | What it is |
+|---|---|
+| `/{locale}/` | Landing page |
+| `/{locale}/support/` | Contact and common fixes |
+| `/{locale}/delete-account/` | In-app deletion steps and the web deletion request form (required by Google Play) |
+| `/{locale}/privacy/` | Privacy policy |
+| `/{locale}/terms/` | Terms of use |
 
-## Watch Tutorial on YouTube
+`/`, `/privacy`, `/terms`, `/support` and `/delete-account` without a language redirect to the
+visitor's language (see `netlify.toml` at the repo root). Use these short links in the app and in
+the Play Console.
 
-Check out the preivew to see how this website was built: [KickCV Website Tutorial](https://youtu.be/zSz67kLPbZY?si=mVBTTh23pv_roRHQ)
+## Run it
 
-## Tech Stack
+```bash
+pnpm install                                   # from the repo root
+pnpm --filter @startup/landing-page dev        # http://localhost:3000/en/
+pnpm --filter @startup/landing-page build      # writes apps/landing-page/out
+pnpm --filter @startup/landing-page typecheck
+```
 
-- **Next.js**: For building the React-based website.
-- **TailwindCSS**: For styling with utility-first CSS.
-- **Shadcn UI**: For UI components.
-- **Magic UI**: For UI components.
-- **Clerk**: For user authentication.
+`out/` is plain HTML, CSS, JS and images. Language redirects, the 404 page and the deletion form
+only work on Netlify, because they depend on `netlify.toml` and Netlify Forms.
 
-## Quick Start
+## Changing texts
 
-### Prerequisites
-Make sure that you have installed
-- Node.js
-- Git
-- npm / yarn / pnpm / bun
+All copy lives in `src/i18n/dictionaries/{en,tr,de,es}.ts`. They share the `Dictionary` type from
+`src/i18n/types.ts`, so a string missing in one language fails `typecheck` and `build`. Strings can
+use three inline marks:
 
-1. Clone this repository:
+- `**bold**`
+- `[label](/delete-account)`: paths starting with `/` stay in the current language
+- `{email}`: the contact address from `packages/config`, as a mailto link
 
-   ```bash
-   git clone https://github.com/Shreyas-29/kickcv-website.git
-   cd kickcv-website
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Setup env variables:
-   ```bash
-    # app
-    NEXT_PUBLIC_URL=http://localhost:3000
-    NEXT_PUBLIC_DOMAIN=localhost:3000
-   
-    # clerk
-    CLERK_SECRET_KEY=
-    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-    NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
-    NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
-    NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
-    NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
-   ```
-5. Run the development server:
-   ```bash
-   npm run dev
-   ```
-6. Open your browser and navigate to http://localhost:3000 to see the website in action.
+When you change the privacy policy or the terms, update all four languages and the `effective` date
+in each.
+
+Brand facts shared across the repo (name, site URL, contact email, Play Store link) live in
+`packages/config/site.config.ts`.
+
+## Account deletion requests
+
+The form on `/{locale}/delete-account/` posts to Netlify Forms as `account-deletion`. Netlify finds
+the form through `public/__forms.html`; keep its field names in sync with
+`src/components/site/deletion-request-form.tsx`. Requests appear under **Forms** in the Netlify
+dashboard and are emailed to the address set up there.
+
+## Deploying on Netlify
+
+1. In Netlify, choose **Add new site → Import an existing project**, then pick `MotionCoreDev/web`.
+   `netlify.toml` already sets the build command, the publish directory and Node 22.
+2. Under **Site configuration → Site details**, rename the site (for example `motioncore`, which
+   gives `motioncore.netlify.app`).
+3. Under **Forms**, turn on form detection and redeploy. Then, under **Forms → Form notifications**,
+   add an email notification for `account-deletion`.
+
+Netlify passes the site's address to the build as `URL`; canonical links and the sitemap use it.
 
 ## Assets
-Download all the assets required for this project [here](https://drive.google.com).
 
-## ☕ Buy Me a Coffee
-If you enjoy using caps.ai, consider supporting my work!  
-[Buy Me a Coffee ☕](https://buymeacoffee.com/shreyas29)
-
-   
+The icons, 3D scenes, exercise animations and fonts (General Sans, Gotham Ultra Italic) are copied
+from the mobile app (`MotionCoreDev/mobile`, `apps/mobile/assets`), so the site matches the app.
+The Google Play badges are Google's official localized badges.
