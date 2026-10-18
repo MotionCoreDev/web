@@ -4,7 +4,7 @@ import "@/styles/globals.css";
 import { SiteFooter } from "@/components/site/site-footer";
 import { SiteHeader } from "@/components/site/site-header";
 import { getDictionary, locales, resolveLocale } from "@/i18n";
-import { brandFont, generalSans } from "@/lib/fonts";
+import { brandFont, textFont } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 
 // One static copy of every page per language; anything else is a 404.
@@ -52,7 +52,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
             <body
                 className={cn(
                     "min-h-screen max-w-full overflow-x-hidden bg-background font-sans text-foreground antialiased",
-                    generalSans.variable,
+                    textFont.variable,
                     brandFont.variable,
                 )}
             >

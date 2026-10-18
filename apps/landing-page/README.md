@@ -68,10 +68,14 @@ Netlify passes the site's address to the build as `URL`; canonical links and the
 
 ## Assets
 
-The icons, 3D scenes, exercise animations and the General Sans font are copied from the mobile app
-(`MotionCoreDev/mobile`, `apps/mobile/assets`), so the site matches the app. The wordmark uses
-Montserrat Black Italic (SIL Open Font License), which `next/font/google` downloads at build time
-and the site serves itself. The Google Play badges are Google's official localized badges.
+The icons, 3D scenes and exercise animations are copied from the mobile app (`MotionCoreDev/mobile`,
+`apps/mobile/assets`), so the site matches the app. The Google Play badges are Google's official
+localized badges.
 
-Only use fonts whose license allows web embedding. Gotham, which the wordmark used before, is a
-commercial font and was replaced for that reason.
+Text is set in Figtree and the wordmark in Montserrat Black Italic, both under the SIL Open Font
+License. `next/font/google` downloads them at build time and the site serves them itself.
+
+This repository is public, so **never commit font files** unless their license allows public
+redistribution. The app's text font, General Sans (Fontshare), allows embedding but not
+redistribution, which is why the site doesn't use it. Gotham, used for the wordmark before, is a
+commercial font without a license here.
