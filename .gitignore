@@ -4,3 +4,10 @@ dist
 .env
 .env.local
 .turbo
+
+# Font files: this repository is public and most font licenses forbid redistribution.
+# Load fonts with next/font instead (see apps/landing-page/README.md).
+*.otf
+*.ttf
+*.woff
+*.woff2
