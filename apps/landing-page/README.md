@@ -45,6 +45,9 @@ use three inline marks:
 When you change the privacy policy or the terms, update all four languages and the `effective` date
 in each.
 
+Write texts the way people write in that language: periods, commas, colons and parentheses. Don't
+use em dashes (—); they read as machine-written, and Turkish doesn't use them this way.
+
 Brand facts shared across the repo (name, site URL, contact email, Play Store link) live in
 `packages/config/site.config.ts`.
 

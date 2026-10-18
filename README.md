@@ -1,4 +1,4 @@
-# MotionCore — website
+# MotionCore website
 
 The public website of [MotionCore](https://play.google.com/store/apps/details?id=com.motioncore.app),
 the camera-based training app that counts every rep. It hosts the landing page, support, the
