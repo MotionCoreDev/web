@@ -5,7 +5,7 @@ const de: Dictionary = {
     meta: {
         siteName: "MotionCore",
         home: {
-            title: "MotionCore — die Kamera zählt jede Wiederholung",
+            title: "MotionCore: Die Kamera zählt jede Wiederholung",
             description:
                 "MotionCore verfolgt deine Technik über die Handykamera, zählt volle und halbe Wiederholungen und lässt dich in 60-Sekunden-Duellen und Ranglisten antreten. Kostenlos für Android.",
         },
@@ -15,7 +15,7 @@ const de: Dictionary = {
         },
         deleteAccount: {
             title: "Konto löschen",
-            description: "So löschst du dein MotionCore-Konto und deine Daten — in der App oder per Anfrage im Web.",
+            description: "So löschst du dein MotionCore-Konto und deine Daten, in der App oder per Anfrage im Web.",
         },
         privacy: {
             title: "Datenschutzerklärung",
@@ -63,12 +63,12 @@ const de: Dictionary = {
         ],
         showcase: {
             eyebrow: "Ein Blick in die App",
-            titleLead: "Handy aufstellen, loslegen —",
-            titleAccent: "MotionCore zählt mit",
+            titleLead: "Handy aufstellen, loslegen.",
+            titleAccent: "MotionCore zählt mit.",
             description: "Jeder Bildschirm folgt einer Idee: Du trainierst, die Kamera zählt.",
             tracking: {
                 tag: "Live-Tracking",
-                title: "Volle und halbe Wiederholungen und Halteübungen — gezählt, während du dich bewegst",
+                title: "Volle und halbe Wiederholungen und Halteübungen, gezählt in Echtzeit",
                 body: "Das Pose-Tracking erfasst in jedem Bild 33 Körperpunkte. Eine flache Kniebeuge zählt als halbe Wiederholung, der Unterarmstütz wird nur gezählt, solange dein Körper gerade bleibt, und kurze Hinweise sagen dir, was du verbessern kannst.",
                 chips: ["Vollständig", "Halb", "Halten"],
             },
@@ -78,11 +78,11 @@ const de: Dictionary = {
             },
             leaderboard: {
                 title: "Ranglisten, die neu starten",
-                body: "Steig in der Tages-, Wochen-, Monats- oder Allzeit-Rangliste auf — insgesamt oder für eine einzelne Übung.",
+                body: "Steig in der Tages-, Wochen-, Monats- oder Allzeit-Rangliste auf, insgesamt oder für eine einzelne Übung.",
             },
             library: {
                 title: "17 Übungen in 7 Kategorien",
-                body: "Arme, Schultern, Brust, Rücken, Rumpf, Beine und Yoga — jede Übung mit animierter Vorführung und klarer Beschreibung.",
+                body: "Arme, Schultern, Brust, Rücken, Rumpf, Beine und Yoga. Jede Übung hat eine animierte Vorführung und eine klare Beschreibung.",
                 exercises: ["Kniebeugen", "Liegestütze", "Ausfallschritte", "Unterarmstütz", "Schulterdrücken", "Krieger II"],
             },
             progress: {
@@ -102,7 +102,7 @@ const de: Dictionary = {
                 },
                 {
                     title: "Hinweise im richtigen Moment",
-                    body: "Kurze Tipps wie „Geh tiefer“ oder „Starke Wiederholung“ auf dem Bildschirm und per Stimme — ohne deinen Rhythmus zu stören.",
+                    body: "Kurze Tipps wie „Geh tiefer“ oder „Starke Wiederholung“ auf dem Bildschirm und per Stimme, ohne deinen Rhythmus zu stören.",
                 },
                 {
                     title: "Von vorne oder seitlich",
@@ -110,7 +110,7 @@ const de: Dictionary = {
                 },
                 {
                     title: "Faire Wertung",
-                    body: "Wiederholungen werden mit Zeitstempel auf unseren Servern geprüft — Ranglisten- und Duellergebnisse lassen sich nicht einfach eintippen.",
+                    body: "Wiederholungen werden mit Zeitstempel auf unseren Servern geprüft. Ranglisten- und Duellergebnisse lassen sich also nicht einfach eintippen.",
                 },
                 {
                     title: "Spricht deine Sprache",
@@ -125,7 +125,7 @@ const de: Dictionary = {
         privacy: {
             eyebrow: "Datenschutz",
             title: "Dein Kamerabild verlässt nie dein Handy",
-            body: "MotionCore wandelt jedes Kamerabild direkt auf dem Gerät in Körperpunkte um und behält nur die Zahlen — Wiederholungen, Zeit und Technik. Im Duell sieht dein Gegner ein vereinfachtes Skelett, nie dein Video.",
+            body: "MotionCore wandelt jedes Kamerabild direkt auf dem Gerät in Körperpunkte um und behält nur die Zahlen: Wiederholungen, Zeit und Technik. Im Duell sieht dein Gegner ein vereinfachtes Skelett, nie dein Video.",
             link: "Datenschutzerklärung lesen",
             stats: [
                 { value: "0", label: "hochgeladene Videobilder" },
@@ -138,7 +138,7 @@ const de: Dictionary = {
             eyebrow: "So funktioniert's",
             titleLead: "Vom Download zur ersten Wiederholung",
             titleAccent: "in drei Schritten",
-            description: "Nichts zu koppeln und keine lange Einrichtung — nur dein Handy und etwas Platz zum Bewegen.",
+            description: "Nichts zu koppeln und keine lange Einrichtung. Du brauchst nur dein Handy und etwas Platz zum Bewegen.",
             stepLabel: "Schritt",
             items: [
                 {
@@ -147,7 +147,7 @@ const de: Dictionary = {
                 },
                 {
                     title: "Handy aufstellen",
-                    body: "Stell es aufrecht auf Hüfthöhe ein paar Schritte entfernt auf, sodass dein ganzer Körper — von Kopf bis Fuß — im Bild ist.",
+                    body: "Stell es aufrecht auf Hüfthöhe ein paar Schritte entfernt auf, sodass dein ganzer Körper von Kopf bis Fuß im Bild ist.",
                 },
                 {
                     title: "Loslegen",
@@ -162,7 +162,7 @@ const de: Dictionary = {
             items: [
                 {
                     q: "Wird mein Kameravideo hochgeladen oder gespeichert?",
-                    a: "Nein. Die Pose-Analyse läuft auf deinem Handy, und Kamerabilder werden weder aufgezeichnet noch gespeichert oder irgendwohin gesendet. In deinem Konto landen nur die Ergebnisse — Wiederholungen, Dauer und Technik.",
+                    a: "Nein. Die Pose-Analyse läuft auf deinem Handy, und Kamerabilder werden weder aufgezeichnet noch gespeichert oder irgendwohin gesendet. In deinem Konto landen nur die Ergebnisse: Wiederholungen, Dauer und Technik.",
                 },
                 {
                     q: "Ist MotionCore kostenlos?",
@@ -209,7 +209,7 @@ const de: Dictionary = {
     },
     support: {
         title: "Wie können wir helfen?",
-        intro: "Fragen, ein Fehler oder Feedback zu MotionCore? Schreib uns — ein echter Mensch aus dem Team antwortet dir.",
+        intro: "Fragen, ein Fehler oder Feedback zu MotionCore? Schreib uns, ein echter Mensch aus dem Team antwortet dir.",
         contact: {
             title: "Schreib uns eine E-Mail",
             body: "Schreib an {email}. Gib bitte die E-Mail-Adresse an, die du in der App nutzt, und bei Fehlern dein Handymodell.",
@@ -248,11 +248,11 @@ const de: Dictionary = {
     },
     deletion: {
         title: "Konto oder Daten löschen",
-        intro: "So löschst du dein MotionCore-Konto und die damit verbundenen Daten — mit oder ohne App.",
+        intro: "So löschst du dein MotionCore-Konto und die damit verbundenen Daten, mit oder ohne App.",
         app: "App: MotionCore (com.motioncore.app) · Entwickler: MotionCore",
         inApp: {
             title: "In der App löschen",
-            badge: "Am schnellsten — sofort",
+            badge: "Am schnellsten",
             steps: [
                 "Öffne MotionCore und melde dich an.",
                 "Tippe auf dein Profilbild und dann auf **Einstellungen**.",
@@ -267,8 +267,8 @@ const de: Dictionary = {
             emailHelp: "Wir bearbeiten nur Anfragen, die über die E-Mail-Adresse des Kontos bestätigt werden.",
             scope: "Was sollen wir löschen?",
             scopeAccount: "Mein ganzes Konto mit allen Daten",
-            scopeAccountHelp: "Endgültig — kann nicht rückgängig gemacht werden.",
-            scopeData: "Nur einen Teil meiner Daten — Konto behalten",
+            scopeAccountHelp: "Endgültig. Das lässt sich nicht rückgängig machen.",
+            scopeData: "Nur einen Teil meiner Daten (Konto behalten)",
             scopeDataHelp: "Wähle aus, was gelöscht werden soll:",
             dataItems: [
                 "Trainingsdaten und Statistiken",
@@ -292,7 +292,7 @@ const de: Dictionary = {
         },
         email: {
             title: "Oder per E-Mail anfragen",
-            body: "Sende von der E-Mail-Adresse deines Kontos eine Nachricht mit dem Betreff **Anfrage zur Kontolöschung** — oder **Anfrage zur Datenlöschung**, wenn du dein Konto behalten möchtest — an {email}.",
+            body: "Sende von der E-Mail-Adresse deines Kontos eine Nachricht mit dem Betreff **Anfrage zur Kontolöschung** an {email}. Wenn du dein Konto behalten und nur einen Teil deiner Daten löschen lassen möchtest, verwende den Betreff **Anfrage zur Datenlöschung**.",
         },
         deleted: {
             title: "Was gelöscht wird",
@@ -329,14 +329,14 @@ const de: Dictionary = {
                             ["Absturz- und Fehlerberichte (Gerätemodell, Betriebssystem- und App-Version, technische Fehlerdetails)", "Um Abstürze zu finden und zu beheben. Sie enthalten weder deinen Namen noch deine E-Mail-Adresse oder Kamerabilder."],
                         ),
                         callout(
-                            "**Kamerabilder verlassen nie dein Gerät.** Die Bewegungsanalyse läuft vollständig auf deinem Handy; Kamerabilder werden weder aufgezeichnet noch gespeichert oder übertragen. Unsere Server erhalten nur Zahlen — Wiederholungen, Dauer und Technikergebnisse. Während eines Duells werden vereinfachte Körperpunkte (ein Strichmännchen-Skelett, kein Bild) live an deinen Gegner gesendet, damit die App deine Bewegung zeigen kann; sie werden nicht gespeichert.",
+                            "**Kamerabilder verlassen nie dein Gerät.** Die Bewegungsanalyse läuft vollständig auf deinem Handy; Kamerabilder werden weder aufgezeichnet noch gespeichert oder übertragen. Unsere Server erhalten nur Zahlen: Wiederholungen, Dauer und Technikergebnisse. Während eines Duells werden vereinfachte Körperpunkte (ein Strichmännchen-Skelett, kein Bild) live an deinen Gegner gesendet, damit die App deine Bewegung zeigen kann; sie werden nicht gespeichert.",
                         ),
                         p("Folgendes erheben wir **nicht**:"),
                         list(
                             "Deinen Standort",
                             "Kontakte, Nachrichten oder Anruflisten",
-                            "Werbe-IDs — die App zeigt keine Werbung",
-                            "Zahlungs- oder Kartendaten — die App bietet keine In-App-Käufe",
+                            "Werbe-IDs (die App zeigt keine Werbung)",
+                            "Zahlungs- oder Kartendaten (die App bietet keine In-App-Käufe)",
                         ),
                     ],
                 },
@@ -380,7 +380,7 @@ const de: Dictionary = {
                     id: "retention",
                     title: "5. Speicherdauer",
                     blocks: [
-                        p("Wir speichern deine Daten, solange dein Konto besteht. Wenn du dein Konto löschst, werden deine Daten endgültig gelöscht; das Entfernen aus Backups dauert bis zu 30 Tage. Absturzberichte werden für begrenzte Zeit gespeichert — höchstens 90 Tage."),
+                        p("Wir speichern deine Daten, solange dein Konto besteht. Wenn du dein Konto löschst, werden deine Daten endgültig gelöscht; das Entfernen aus Backups dauert bis zu 30 Tage. Absturzberichte werden höchstens 90 Tage lang gespeichert."),
                     ],
                 },
                 {
@@ -395,7 +395,7 @@ const de: Dictionary = {
                     id: "your-rights",
                     title: "7. Deine Rechte",
                     blocks: [
-                        p("Je nachdem, wo du lebst — etwa nach der EU-Datenschutz-Grundverordnung (DSGVO) oder dem türkischen Datenschutzgesetz (KVKK) — hast du das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Widerspruch, Datenübertragbarkeit und Beschwerde bei einer Datenschutzbehörde."),
+                        p("Je nachdem, wo du lebst, etwa nach der EU-Datenschutz-Grundverordnung (DSGVO) oder dem türkischen Datenschutzgesetz (KVKK), hast du das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Widerspruch, Datenübertragbarkeit und Beschwerde bei einer Datenschutzbehörde."),
                         p("Du kannst dein Profil in der App bearbeiten und dein Konto jederzeit löschen. Für alles andere schreib an {email}."),
                     ],
                 },
@@ -443,7 +443,7 @@ const de: Dictionary = {
                     blocks: [
                         callout("**MotionCore ist kein Medizinprodukt.** Es stellt keine Diagnosen, behandelt nicht und ersetzt keinen Rat von Ärzten oder Physiotherapeuten. Trainings, Wiederholungszählungen und Technik-Feedback dienen nur der allgemeinen Fitness."),
                         list(
-                            "Sprich mit einer Ärztin oder einem Arzt, bevor du ein neues Training beginnst — besonders bei Herz-, Gelenk-, Rücken- oder Atemproblemen, Bluthochdruck oder in der Schwangerschaft.",
+                            "Sprich mit einer Ärztin oder einem Arzt, bevor du ein neues Training beginnst, besonders bei Herz-, Gelenk-, Rücken- oder Atemproblemen, Bluthochdruck oder in der Schwangerschaft.",
                             "Sport birgt ein Verletzungsrisiko. Du entscheidest dich selbst für jede Übung und führst sie auf eigenes Risiko aus.",
                             "Hör sofort auf und hol dir Hilfe, wenn du Schmerzen, Schwindel, Übelkeit oder Atemnot spürst.",
                             "Das Pose-Tracking kann sich irren. Sieh Wiederholungszählungen und Technikhinweise als Orientierung, nicht als fachliche Beurteilung.",
@@ -456,7 +456,7 @@ const de: Dictionary = {
                     title: "2. Voraussetzungen und dein Konto",
                     blocks: [
                         list(
-                            "Du musst mindestens 16 Jahre alt sein — oder älter, wenn das digitale Mindestalter in deinem Land höher ist.",
+                            "Du musst mindestens 16 Jahre alt sein, oder älter, falls das digitale Mindestalter in deinem Land höher ist.",
                             "Deine Angaben müssen stimmen, und ein Konto gehört nur einer Person.",
                             "Gib deine Anmeldedaten nicht weiter und sag uns sofort Bescheid, wenn jemand anderes Zugriff auf dein Konto bekommt.",
                         ),
@@ -468,7 +468,7 @@ const de: Dictionary = {
                     blocks: [
                         p("Damit Ranglisten und Duelle für alle fair bleiben, darfst du nicht:"),
                         list(
-                            "Wiederholungen, Punkte oder Duellergebnisse fälschen oder manipulieren — etwa mit Skripten, veränderten Apps, Emulatoren oder aufgezeichneten Videos",
+                            "Wiederholungen, Punkte oder Duellergebnisse fälschen oder manipulieren, etwa mit Skripten, veränderten Apps, Emulatoren oder aufgezeichneten Videos",
                             "Die App oder ihre Modelle zurückentwickeln, dekompilieren, verändern oder manipulieren",
                             "Sicherheitsmaßnahmen oder Anfragelimits umgehen oder automatisiert auf den Dienst zugreifen",
                             "Einen anstößigen, irreführenden oder fremde Personen nachahmenden Benutzernamen oder ein solches Profilbild verwenden",
@@ -488,7 +488,7 @@ const de: Dictionary = {
                     id: "intellectual-property",
                     title: "5. Geistiges Eigentum",
                     blocks: [
-                        p("Der Dienst — Software, Pose-Analyse-Technologie, Designs, Illustrationen, Sounds, Name und Logo — gehört MotionCore oder seinen Lizenzgebern. Wir gewähren dir eine persönliche, nicht ausschließliche, nicht übertragbare und widerrufliche Lizenz, den Dienst für dein eigenes, nicht kommerzielles Training zu nutzen."),
+                        p("Der Dienst mit Software, Pose-Analyse-Technologie, Designs, Illustrationen, Sounds, Name und Logo gehört MotionCore oder seinen Lizenzgebern. Wir gewähren dir eine persönliche, nicht ausschließliche, nicht übertragbare und widerrufliche Lizenz, den Dienst für dein eigenes, nicht kommerzielles Training zu nutzen."),
                     ],
                 },
                 {
@@ -502,7 +502,7 @@ const de: Dictionary = {
                     id: "termination",
                     title: "7. Kontolöschung und Beendigung",
                     blocks: [
-                        p("Du kannst den Dienst jederzeit nicht mehr nutzen und dein Konto löschen — in der App oder über unsere [Seite zur Kontolöschung](/delete-account). Konten, die schwer oder wiederholt gegen diese Bedingungen verstoßen, können wir sperren oder schließen."),
+                        p("Du kannst den Dienst jederzeit nicht mehr nutzen und dein Konto löschen, in der App oder über unsere [Seite zur Kontolöschung](/delete-account). Konten, die schwer oder wiederholt gegen diese Bedingungen verstoßen, können wir sperren oder schließen."),
                     ],
                 },
                 {
@@ -517,7 +517,7 @@ const de: Dictionary = {
                     title: "9. Gewährleistungsausschluss und Haftungsbeschränkung",
                     blocks: [
                         p("Der Dienst wird, soweit gesetzlich zulässig, „wie besehen“ und „wie verfügbar“ ohne jede Gewährleistung bereitgestellt. Soweit gesetzlich zulässig, haftet MotionCore nicht für indirekte oder Folgeschäden oder für Verletzungen durch Übungen, die du selbst ausführst."),
-                        p("Nichts in diesen Bedingungen beschränkt eine Haftung, die gesetzlich nicht beschränkt werden kann — etwa bei Vorsatz oder grober Fahrlässigkeit — oder deine Rechte als Verbraucher."),
+                        p("Nichts in diesen Bedingungen beschränkt eine Haftung, die gesetzlich nicht beschränkt werden kann (etwa bei Vorsatz oder grober Fahrlässigkeit), oder deine Rechte als Verbraucher."),
                     ],
                 },
                 {

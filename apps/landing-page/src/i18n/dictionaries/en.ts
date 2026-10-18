@@ -5,7 +5,7 @@ const en: Dictionary = {
     meta: {
         siteName: "MotionCore",
         home: {
-            title: "MotionCore — the camera counts every rep",
+            title: "MotionCore: the camera counts every rep",
             description:
                 "MotionCore tracks your form through your phone's camera, counts full and half reps, and lets you compete in 60-second battles and leaderboards. Free on Android.",
         },
@@ -15,7 +15,7 @@ const en: Dictionary = {
         },
         deleteAccount: {
             title: "Delete your account",
-            description: "How to delete your MotionCore account and data — in the app or with a request on the web.",
+            description: "How to delete your MotionCore account and data, in the app or with a request on the web.",
         },
         privacy: {
             title: "Privacy Policy",
@@ -63,12 +63,12 @@ const en: Dictionary = {
         ],
         showcase: {
             eyebrow: "Inside the app",
-            titleLead: "Prop up your phone, start moving —",
-            titleAccent: "MotionCore keeps score",
+            titleLead: "Prop up your phone and start moving.",
+            titleAccent: "MotionCore keeps score.",
             description: "Every screen is built around one idea: you train, the camera does the counting.",
             tracking: {
                 tag: "Live tracking",
-                title: "Full reps, half reps and holds — counted as you move",
+                title: "Full reps, half reps and holds, counted as you move",
                 body: "Pose tracking reads 33 body landmarks in every frame. A shallow squat counts as a half rep, a plank is timed only while your body stays straight, and short cues tell you what to fix.",
                 chips: ["Full", "Half", "Hold"],
             },
@@ -78,11 +78,11 @@ const en: Dictionary = {
             },
             leaderboard: {
                 title: "Leaderboards that reset",
-                body: "Climb today's, this week's, this month's or the all-time board — overall or for a single exercise.",
+                body: "Climb today's, this week's, this month's or the all-time board, overall or for a single exercise.",
             },
             library: {
                 title: "17 movements in 7 categories",
-                body: "Arms, shoulders, chest, back, core, legs and yoga — each with an animated demo and a clear description.",
+                body: "Arms, shoulders, chest, back, core, legs and yoga, each with an animated demo and a clear description.",
                 exercises: ["Squat", "Push Up", "Lunge", "Plank", "Shoulder Press", "Warrior Two"],
             },
             progress: {
@@ -102,7 +102,7 @@ const en: Dictionary = {
                 },
                 {
                     title: "Cues at the right moment",
-                    body: "Short hints like “Go deeper” or “Great rep” on screen and by voice — without breaking your rhythm.",
+                    body: "Short hints like “Go deeper” or “Great rep” on screen and by voice, without breaking your rhythm.",
                 },
                 {
                     title: "Front or side view",
@@ -125,7 +125,7 @@ const en: Dictionary = {
         privacy: {
             eyebrow: "Privacy",
             title: "Your camera feed never leaves your phone",
-            body: "MotionCore turns each camera frame into body landmarks on the device and keeps only the numbers — reps, time and form. In a battle your opponent sees a simplified skeleton, never your video.",
+            body: "MotionCore turns each camera frame into body landmarks on the device and keeps only the numbers: reps, time and form. In a battle your opponent sees a simplified skeleton, never your video.",
             link: "Read the privacy policy",
             stats: [
                 { value: "0", label: "video frames uploaded" },
@@ -138,7 +138,7 @@ const en: Dictionary = {
             eyebrow: "How it works",
             titleLead: "From download to first rep",
             titleAccent: "in three steps",
-            description: "Nothing to pair and no long setup — just your phone and some space to move.",
+            description: "Nothing to pair and no long setup. All you need is your phone and some space to move.",
             stepLabel: "Step",
             items: [
                 {
@@ -147,7 +147,7 @@ const en: Dictionary = {
                 },
                 {
                     title: "Set up your phone",
-                    body: "Stand it upright at about hip height a few steps away, so your whole body — head to feet — is in the frame.",
+                    body: "Stand it upright at about hip height a few steps away, so your whole body, from head to feet, is in the frame.",
                 },
                 {
                     title: "Start moving",
@@ -162,7 +162,7 @@ const en: Dictionary = {
             items: [
                 {
                     q: "Is my camera video uploaded or stored?",
-                    a: "No. Pose analysis runs on your phone, and camera frames are not recorded, stored or sent anywhere. Only the results — rep counts, duration and form — are saved to your account.",
+                    a: "No. Pose analysis runs on your phone, and camera frames are not recorded, stored or sent anywhere. Only the results are saved to your account: rep counts, duration and form.",
                 },
                 {
                     q: "Is MotionCore free?",
@@ -209,7 +209,7 @@ const en: Dictionary = {
     },
     support: {
         title: "How can we help?",
-        intro: "Questions, a bug or feedback about MotionCore? Write to us — a real person on the team will answer.",
+        intro: "Questions, a bug or feedback about MotionCore? Write to us and a real person on the team will answer.",
         contact: {
             title: "Email us",
             body: "Write to {email}. Please include the email address you use in the app and, for bugs, your phone model.",
@@ -248,11 +248,11 @@ const en: Dictionary = {
     },
     deletion: {
         title: "Delete your account or data",
-        intro: "How to delete your MotionCore account and the data linked to it — with or without the app.",
+        intro: "How to delete your MotionCore account and the data linked to it, with or without the app.",
         app: "App: MotionCore (com.motioncore.app) · Developer: MotionCore",
         inApp: {
             title: "Delete in the app",
-            badge: "Fastest — instant",
+            badge: "Fastest",
             steps: [
                 "Open MotionCore and sign in.",
                 "Tap your profile photo, then **Settings**.",
@@ -267,8 +267,8 @@ const en: Dictionary = {
             emailHelp: "We only act on requests that are confirmed from the account's email address.",
             scope: "What should we delete?",
             scopeAccount: "My whole account and all of its data",
-            scopeAccountHelp: "Permanent — this cannot be undone.",
-            scopeData: "Only some of my data — keep my account",
+            scopeAccountHelp: "Permanent. This cannot be undone.",
+            scopeData: "Only some of my data (keep my account)",
             scopeDataHelp: "Choose what to delete:",
             dataItems: [
                 "Workout records and statistics",
@@ -292,7 +292,7 @@ const en: Dictionary = {
         },
         email: {
             title: "Or request by email",
-            body: "Send an email with the subject **Account Deletion Request** — or **Data Deletion Request** if you want to keep your account — from your account's email address to {email}.",
+            body: "Send an email with the subject **Account Deletion Request** from your account's email address to {email}. To keep your account and delete only some data, use the subject **Data Deletion Request**.",
         },
         deleted: {
             title: "What gets deleted",
@@ -329,14 +329,14 @@ const en: Dictionary = {
                             ["Crash and error reports (device model, operating system and app version, technical error details)", "To find and fix crashes. They don't contain your name, email address or camera images."],
                         ),
                         callout(
-                            "**Camera images never leave your device.** Movement analysis runs entirely on your phone; camera frames are not recorded, stored or sent anywhere. Only numeric results — rep counts, duration and form results — reach our servers. During a battle, simplified body keypoints (a stick-figure skeleton, not an image) are sent live to your opponent so the app can show your movement; they are not stored.",
+                            "**Camera images never leave your device.** Movement analysis runs entirely on your phone; camera frames are not recorded, stored or sent anywhere. Only numeric results reach our servers: rep counts, duration and form results. During a battle, simplified body keypoints (a stick-figure skeleton, not an image) are sent live to your opponent so the app can show your movement; they are not stored.",
                         ),
                         p("We do **not** collect:"),
                         list(
                             "Your location",
                             "Contacts, messages or call logs",
-                            "Advertising identifiers — the app shows no ads",
-                            "Payment or card details — the app has no in-app purchases",
+                            "Advertising identifiers (the app shows no ads)",
+                            "Payment or card details (the app has no in-app purchases)",
                         ),
                     ],
                 },
@@ -380,7 +380,7 @@ const en: Dictionary = {
                     id: "retention",
                     title: "5. How long we keep data",
                     blocks: [
-                        p("We keep your data for as long as your account exists. When you delete your account, your data is deleted permanently; removing it from backups takes up to 30 days. Crash reports are kept for a limited time — at most 90 days."),
+                        p("We keep your data for as long as your account exists. When you delete your account, your data is deleted permanently; removing it from backups takes up to 30 days. Crash reports are kept for at most 90 days."),
                     ],
                 },
                 {
@@ -395,7 +395,7 @@ const en: Dictionary = {
                     id: "your-rights",
                     title: "7. Your rights",
                     blocks: [
-                        p("Depending on where you live — for example under the EU GDPR or Türkiye's Personal Data Protection Law (KVKK) — you have the right to access your data, correct it, delete it, restrict or object to its processing, receive it in a portable format and complain to a data protection authority."),
+                        p("Depending on where you live, for example under the EU GDPR or Türkiye's Personal Data Protection Law (KVKK), you have the right to access your data, correct it, delete it, restrict or object to its processing, receive it in a portable format and complain to a data protection authority."),
                         p("You can edit your profile in the app and delete your account at any time. For anything else, email {email}."),
                     ],
                 },
@@ -468,7 +468,7 @@ const en: Dictionary = {
                     blocks: [
                         p("To keep leaderboards and battles fair for everyone, you must not:"),
                         list(
-                            "Fake or manipulate rep counts, scores or battle results — for example with scripts, modified apps, emulators or recorded videos",
+                            "Fake or manipulate rep counts, scores or battle results, for example with scripts, modified apps, emulators or recorded videos",
                             "Reverse engineer, decompile, modify or tamper with the app or its models",
                             "Get around security measures or rate limits, or access the Service in an automated way",
                             "Use a username or profile photo that is offensive, misleading or impersonates someone",
@@ -488,7 +488,7 @@ const en: Dictionary = {
                     id: "intellectual-property",
                     title: "5. Intellectual property",
                     blocks: [
-                        p("The Service — its software, pose-analysis technology, designs, illustrations, sounds, name and logo — belongs to MotionCore or its licensors. We give you a personal, non-exclusive, non-transferable and revocable licence to use the Service for your own, non-commercial training."),
+                        p("The Service, including its software, pose-analysis technology, designs, illustrations, sounds, name and logo, belongs to MotionCore or its licensors. We give you a personal, non-exclusive, non-transferable and revocable licence to use the Service for your own, non-commercial training."),
                     ],
                 },
                 {
@@ -502,7 +502,7 @@ const en: Dictionary = {
                     id: "termination",
                     title: "7. Deleting your account and termination",
                     blocks: [
-                        p("You can stop using the Service and delete your account at any time — in the app or through our [account deletion page](/delete-account). We may suspend or close accounts that seriously or repeatedly break these terms."),
+                        p("You can stop using the Service and delete your account at any time, in the app or through our [account deletion page](/delete-account). We may suspend or close accounts that seriously or repeatedly break these terms."),
                     ],
                 },
                 {
@@ -517,7 +517,7 @@ const en: Dictionary = {
                     title: "9. Disclaimer and limitation of liability",
                     blocks: [
                         p("The Service is provided “as is” and “as available”, without warranties of any kind to the extent the law allows. To the extent the law allows, MotionCore is not liable for indirect or consequential damages, or for injuries resulting from exercises you choose to do."),
-                        p("Nothing in these terms limits liability that cannot be limited by law — for example for intent or gross negligence — or your rights as a consumer."),
+                        p("Nothing in these terms limits liability that cannot be limited by law (for example for intent or gross negligence) or your rights as a consumer."),
                     ],
                 },
                 {

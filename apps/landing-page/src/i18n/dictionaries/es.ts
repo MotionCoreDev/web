@@ -5,7 +5,7 @@ const es: Dictionary = {
     meta: {
         siteName: "MotionCore",
         home: {
-            title: "MotionCore — la cámara cuenta cada repetición",
+            title: "MotionCore: la cámara cuenta cada repetición",
             description:
                 "MotionCore sigue tu técnica con la cámara del móvil, cuenta repeticiones completas y medias, y te permite competir en duelos de 60 segundos y clasificaciones. Gratis en Android.",
         },
@@ -63,12 +63,12 @@ const es: Dictionary = {
         ],
         showcase: {
             eyebrow: "Dentro de la app",
-            titleLead: "Coloca el móvil, empieza a moverte —",
-            titleAccent: "MotionCore lleva la cuenta",
+            titleLead: "Coloca el móvil y empieza a moverte.",
+            titleAccent: "MotionCore lleva la cuenta.",
             description: "Cada pantalla gira en torno a una idea: tú entrenas y la cámara cuenta.",
             tracking: {
                 tag: "Seguimiento en vivo",
-                title: "Repeticiones completas, medias y mantenimientos — contados mientras te mueves",
+                title: "Repeticiones completas, medias y mantenimientos, contados mientras te mueves",
                 body: "El seguimiento de postura lee 33 puntos del cuerpo en cada imagen. Una sentadilla poco profunda cuenta como media repetición, la plancha solo suma tiempo mientras tu cuerpo sigue recto y unas indicaciones breves te dicen qué corregir.",
                 chips: ["Completas", "Medias", "Mantenimiento"],
             },
@@ -252,7 +252,7 @@ const es: Dictionary = {
         app: "App: MotionCore (com.motioncore.app) · Desarrollador: MotionCore",
         inApp: {
             title: "Eliminarla desde la app",
-            badge: "Lo más rápido — al instante",
+            badge: "Lo más rápido",
             steps: [
                 "Abre MotionCore e inicia sesión.",
                 "Toca tu foto de perfil y luego **Ajustes**.",
@@ -268,7 +268,7 @@ const es: Dictionary = {
             scope: "¿Qué quieres que eliminemos?",
             scopeAccount: "Toda mi cuenta y todos sus datos",
             scopeAccountHelp: "Es definitivo: no se puede deshacer.",
-            scopeData: "Solo parte de mis datos — quiero conservar la cuenta",
+            scopeData: "Solo parte de mis datos (quiero conservar la cuenta)",
             scopeDataHelp: "Elige qué eliminar:",
             dataItems: [
                 "Registros de entrenamiento y estadísticas",
@@ -292,7 +292,7 @@ const es: Dictionary = {
         },
         email: {
             title: "O solicítalo por correo",
-            body: "Envía desde el correo de tu cuenta un mensaje con el asunto **Solicitud de eliminación de cuenta** — o **Solicitud de eliminación de datos** si quieres conservar la cuenta — a {email}.",
+            body: "Envía desde el correo de tu cuenta un mensaje con el asunto **Solicitud de eliminación de cuenta** a {email}. Si quieres conservar la cuenta y eliminar solo parte de tus datos, usa el asunto **Solicitud de eliminación de datos**.",
         },
         deleted: {
             title: "Qué se elimina",
@@ -395,7 +395,7 @@ const es: Dictionary = {
                     id: "your-rights",
                     title: "7. Tus derechos",
                     blocks: [
-                        p("Según dónde vivas — por ejemplo, en virtud del Reglamento General de Protección de Datos de la UE (RGPD) o de la ley turca de protección de datos (KVKK) — tienes derecho a acceder a tus datos, rectificarlos, suprimirlos, limitar u oponerte a su tratamiento, recibirlos en un formato portable y presentar una reclamación ante una autoridad de protección de datos."),
+                        p("Según dónde vivas, por ejemplo, en virtud del Reglamento General de Protección de Datos de la UE (RGPD) o de la ley turca de protección de datos (KVKK), tienes derecho a acceder a tus datos, rectificarlos, suprimirlos, limitar u oponerte a su tratamiento, recibirlos en un formato portable y presentar una reclamación ante una autoridad de protección de datos."),
                         p("Puedes editar tu perfil en la app y eliminar tu cuenta cuando quieras. Para cualquier otra cosa, escribe a {email}."),
                     ],
                 },
@@ -488,7 +488,7 @@ const es: Dictionary = {
                     id: "intellectual-property",
                     title: "5. Propiedad intelectual",
                     blocks: [
-                        p("El Servicio — su software, la tecnología de análisis de postura, los diseños, las ilustraciones, los sonidos, el nombre y el logotipo — pertenece a MotionCore o a sus licenciantes. Te concedemos una licencia personal, no exclusiva, intransferible y revocable para usar el Servicio en tu propio entrenamiento, sin fines comerciales."),
+                        p("El Servicio, con su software, la tecnología de análisis de postura, los diseños, las ilustraciones, los sonidos, el nombre y el logotipo, pertenece a MotionCore o a sus licenciantes. Te concedemos una licencia personal, no exclusiva, intransferible y revocable para usar el Servicio en tu propio entrenamiento, sin fines comerciales."),
                     ],
                 },
                 {
@@ -517,7 +517,7 @@ const es: Dictionary = {
                     title: "9. Exención de garantías y limitación de responsabilidad",
                     blocks: [
                         p("En la medida en que la ley lo permita, el Servicio se ofrece «tal cual» y «según disponibilidad», sin garantías de ningún tipo. En la medida en que la ley lo permita, MotionCore no responde de daños indirectos o consecuentes ni de lesiones derivadas de los ejercicios que decidas hacer."),
-                        p("Nada de estas condiciones limita la responsabilidad que la ley no permite limitar — por ejemplo, por dolo o negligencia grave — ni tus derechos como consumidor."),
+                        p("Nada de estas condiciones limita la responsabilidad que la ley no permite limitar (por ejemplo, por dolo o negligencia grave) ni tus derechos como consumidor."),
                     ],
                 },
                 {

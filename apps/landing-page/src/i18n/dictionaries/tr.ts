@@ -5,7 +5,7 @@ const tr: Dictionary = {
     meta: {
         siteName: "MotionCore",
         home: {
-            title: "MotionCore — her tekrarı kamera sayar",
+            title: "MotionCore: her tekrarı kamera sayar",
             description:
                 "MotionCore telefonunuzun kamerasıyla formunuzu takip eder, tam ve yarım tekrarları sayar; 60 saniyelik düellolarda ve sıralamalarda yarışmanızı sağlar. Android'de ücretsiz.",
         },
@@ -63,12 +63,12 @@ const tr: Dictionary = {
         ],
         showcase: {
             eyebrow: "Uygulamanın içinden",
-            titleLead: "Telefonu yerleştirin, harekete geçin —",
-            titleAccent: "skoru MotionCore tutsun",
+            titleLead: "Telefonu yerleştirin, harekete geçin.",
+            titleAccent: "Skoru MotionCore tutsun.",
             description: "Her ekran tek bir fikir üzerine kurulu: siz antrenman yaparsınız, sayımı kamera yapar.",
             tracking: {
                 tag: "Canlı takip",
-                title: "Tam tekrar, yarım tekrar ve tutuşlar — siz hareket ederken sayılır",
+                title: "Tam tekrar, yarım tekrar ve tutuşlar siz hareket ederken sayılır",
                 body: "Poz takibi her karede vücudunuzdaki 33 noktayı okur. Sığ bir squat yarım tekrar sayılır, plank yalnızca vücudunuz düz kaldığı sürece zamanlanır ve kısa uyarılar neyi düzeltmeniz gerektiğini söyler.",
                 chips: ["Tam", "Yarım", "Tutuş"],
             },
@@ -78,11 +78,11 @@ const tr: Dictionary = {
             },
             leaderboard: {
                 title: "Sıfırlanan sıralamalar",
-                body: "Günün, haftanın, ayın ya da tüm zamanların sıralamasında yükselin — genel olarak veya tek bir hareket için.",
+                body: "Günün, haftanın, ayın ya da tüm zamanların sıralamasında yükselin. İster genel sıralamada, ister tek bir harekette.",
             },
             library: {
                 title: "7 kategoride 17 hareket",
-                body: "Kollar, omuzlar, göğüs, sırt, karın, bacaklar ve yoga — her biri animasyonlu bir gösterim ve anlaşılır bir açıklamayla.",
+                body: "Kollar, omuzlar, göğüs, sırt, karın, bacaklar ve yoga. Her hareketin animasyonlu bir gösterimi ve anlaşılır bir açıklaması var.",
                 exercises: ["Squat", "Şınav", "Lunge", "Plank", "Omuz Press", "Savaşçı İki"],
             },
             progress: {
@@ -102,7 +102,7 @@ const tr: Dictionary = {
                 },
                 {
                     title: "Doğru anda yönlendirme",
-                    body: "“Daha derine” ya da “Harika tekrar” gibi kısa uyarılar ekranda ve sesli olarak gelir — ritminiz bozulmaz.",
+                    body: "“Daha derine” ya da “Harika tekrar” gibi kısa uyarılar ekranda ve sesli olarak gelir, ritminiz bozulmaz.",
                 },
                 {
                     title: "Önden ya da yandan",
@@ -138,7 +138,7 @@ const tr: Dictionary = {
             eyebrow: "Nasıl çalışır",
             titleLead: "İndirmeden ilk tekrara",
             titleAccent: "üç adımda",
-            description: "Eşleştirilecek cihaz ya da uzun bir kurulum yok — telefonunuz ve hareket edecek biraz alan yeterli.",
+            description: "Eşleştirilecek cihaz ya da uzun bir kurulum yok. Telefonunuz ve hareket edecek biraz alan yeterli.",
             stepLabel: "Adım",
             items: [
                 {
@@ -209,7 +209,7 @@ const tr: Dictionary = {
     },
     support: {
         title: "Size nasıl yardımcı olabiliriz?",
-        intro: "MotionCore ile ilgili bir sorunuz, hata bildiriminiz ya da geri bildiriminiz mi var? Bize yazın — ekipten gerçek bir kişi yanıtlayacak.",
+        intro: "MotionCore ile ilgili bir sorunuz, hata bildiriminiz ya da geri bildiriminiz mi var? Bize yazın, ekipten gerçek bir kişi yanıtlayacak.",
         contact: {
             title: "Bize e-posta gönderin",
             body: "{email} adresine yazın. Lütfen uygulamada kullandığınız e-posta adresini ve hata bildirimlerinde telefon modelinizi de ekleyin.",
@@ -252,7 +252,7 @@ const tr: Dictionary = {
         app: "Uygulama: MotionCore (com.motioncore.app) · Geliştirici: MotionCore",
         inApp: {
             title: "Uygulama içinden silin",
-            badge: "En hızlısı — anında",
+            badge: "En hızlı yol",
             steps: [
                 "MotionCore'u açın ve giriş yapın.",
                 "Profil fotoğrafınıza, ardından **Ayarlar**'a dokunun.",
@@ -267,8 +267,8 @@ const tr: Dictionary = {
             emailHelp: "Yalnızca hesabın e-posta adresinden onaylanan talepleri işleme alırız.",
             scope: "Neyi silmemizi istiyorsunuz?",
             scopeAccount: "Hesabımın tamamını ve tüm verilerini",
-            scopeAccountHelp: "Kalıcıdır — geri alınamaz.",
-            scopeData: "Yalnızca bazı verilerimi — hesabım kalsın",
+            scopeAccountHelp: "Kalıcıdır, geri alınamaz.",
+            scopeData: "Yalnızca bazı verilerimi (hesabım kalsın)",
             scopeDataHelp: "Silinecekleri seçin:",
             dataItems: [
                 "Antrenman kayıtları ve istatistikler",
@@ -292,7 +292,7 @@ const tr: Dictionary = {
         },
         email: {
             title: "Ya da e-postayla talep edin",
-            body: "Hesabınızın e-posta adresinden {email} adresine **Hesap Silme Talebi** — hesabınızı korumak istiyorsanız **Veri Silme Talebi** — konulu bir e-posta gönderin.",
+            body: "Hesabınızın e-posta adresinden {email} adresine **Hesap Silme Talebi** konulu bir e-posta gönderin. Hesabınızı koruyup yalnızca bazı verilerinizi sildirmek istiyorsanız konu **Veri Silme Talebi** olsun.",
         },
         deleted: {
             title: "Neler silinir",
@@ -335,8 +335,8 @@ const tr: Dictionary = {
                         list(
                             "Konum bilgisi",
                             "Rehber, mesaj veya çağrı kayıtları",
-                            "Reklam kimliği — uygulamada reklam gösterilmez",
-                            "Ödeme veya kart bilgisi — uygulamada uygulama içi satın alma yoktur",
+                            "Reklam kimliği (uygulamada reklam gösterilmez)",
+                            "Ödeme veya kart bilgisi (uygulamada uygulama içi satın alma yoktur)",
                         ),
                     ],
                 },
@@ -395,7 +395,7 @@ const tr: Dictionary = {
                     id: "your-rights",
                     title: "7. Haklarınız",
                     blocks: [
-                        p("Bulunduğunuz yere bağlı olarak — örneğin 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ya da AB Genel Veri Koruma Tüzüğü (GDPR) kapsamında — verilerinize erişme, düzeltilmesini ya da silinmesini isteme, işlenmesini kısıtlama veya itiraz etme, verilerinizi taşınabilir biçimde alma ve veri koruma otoritesine şikâyette bulunma haklarına sahipsiniz."),
+                        p("Bulunduğunuz yere bağlı olarak, örneğin 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ya da AB Genel Veri Koruma Tüzüğü (GDPR) kapsamında, verilerinize erişme, düzeltilmesini ya da silinmesini isteme, işlenmesini kısıtlama veya itiraz etme, verilerinizi taşınabilir biçimde alma ve veri koruma otoritesine şikâyette bulunma haklarına sahipsiniz."),
                         p("Profilinizi uygulama içinden düzenleyebilir ve hesabınızı istediğiniz an silebilirsiniz. Diğer tüm talepleriniz için {email} adresine yazın."),
                     ],
                 },
@@ -468,7 +468,7 @@ const tr: Dictionary = {
                     blocks: [
                         p("Sıralamaların ve düelloların herkes için adil kalması için şunları yapmamalısınız:"),
                         list(
-                            "Tekrar sayılarını, puanları ya da düello sonuçlarını sahte şekilde oluşturmak veya değiştirmek — örneğin betiklerle, değiştirilmiş uygulamalarla, emülatörlerle ya da kayıtlı videolarla",
+                            "Tekrar sayılarını, puanları ya da düello sonuçlarını sahte şekilde oluşturmak veya değiştirmek, örneğin betiklerle, değiştirilmiş uygulamalarla, emülatörlerle ya da kayıtlı videolarla",
                             "Uygulamayı veya modellerini tersine mühendislikle çözmek, kaynak koda dönüştürmek, değiştirmek ya da kurcalamak",
                             "Güvenlik önlemlerini veya istek sınırlarını aşmak ya da Hizmet'e otomatik yollarla erişmek",
                             "Saldırgan, yanıltıcı ya da başkasını taklit eden bir kullanıcı adı veya profil fotoğrafı kullanmak",
@@ -488,7 +488,7 @@ const tr: Dictionary = {
                     id: "intellectual-property",
                     title: "5. Fikri mülkiyet",
                     blocks: [
-                        p("Hizmet — yazılımı, poz analizi teknolojisi, tasarımları, illüstrasyonları, sesleri, adı ve logosu — MotionCore'a veya lisans verenlerine aittir. Size Hizmet'i kendi kişisel ve ticari olmayan antrenmanlarınız için kullanmanız amacıyla kişisel, münhasır olmayan, devredilemez ve geri alınabilir bir lisans veririz."),
+                        p("Hizmet'in yazılımı, poz analizi teknolojisi, tasarımları, illüstrasyonları, sesleri, adı ve logosu MotionCore'a veya lisans verenlerine aittir. Size Hizmet'i kendi kişisel ve ticari olmayan antrenmanlarınız için kullanmanız amacıyla kişisel, münhasır olmayan, devredilemez ve geri alınabilir bir lisans veririz."),
                     ],
                 },
                 {
@@ -517,7 +517,7 @@ const tr: Dictionary = {
                     title: "9. Sorumluluk reddi ve sorumluluğun sınırlandırılması",
                     blocks: [
                         p("Hizmet, mevzuatın izin verdiği ölçüde hiçbir garanti verilmeksizin “olduğu gibi” ve “mevcut olduğu şekilde” sunulur. Mevzuatın izin verdiği ölçüde MotionCore dolaylı veya sonuç olarak ortaya çıkan zararlardan ya da yapmayı seçtiğiniz egzersizlerden kaynaklanan yaralanmalardan sorumlu değildir."),
-                        p("Bu koşullardaki hiçbir hüküm, kanunen sınırlandırılamayan sorumluluğu — örneğin kast veya ağır ihmalden doğan sorumluluğu — ya da tüketici olarak sahip olduğunuz hakları sınırlamaz."),
+                        p("Bu koşullardaki hiçbir hüküm, kanunen sınırlandırılamayan sorumluluğu (örneğin kast veya ağır ihmalden doğan sorumluluğu) ya da tüketici olarak sahip olduğunuz hakları sınırlamaz."),
                     ],
                 },
                 {
