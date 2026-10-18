@@ -3,11 +3,11 @@ import { STORE_LINKS } from "@startup/config";
 import { cn } from "@/lib/utils";
 import { localePath, type Locale } from "@/i18n/config";
 
-/** The MotionCore wordmark, set in the app's Gotham Ultra Italic. */
+/** The MotionCore wordmark, set in Montserrat Black Italic like the app. */
 export function Wordmark({ locale, className }: { locale: Locale; className?: string }) {
     return (
         <Link href={localePath(locale)} aria-label="MotionCore" className={cn("inline-flex items-center gap-2", className)}>
-            <span className="font-brand text-[1.35rem] italic leading-none text-primary">MotionCore</span>
+            <span className="font-brand text-[1.35rem] font-black italic leading-none text-primary">MotionCore</span>
         </Link>
     );
 }

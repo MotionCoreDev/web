@@ -11,7 +11,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
-        // The app's wordmark face, used only for the MotionCore logo text.
+        // Montserrat Black Italic, used only for the MotionCore wordmark.
         brand: ['var(--font-brand)', 'var(--font-sans)', 'sans-serif'],
       },
       colors: {

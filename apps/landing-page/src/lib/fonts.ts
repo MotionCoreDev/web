@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
+import { Montserrat } from "next/font/google";
 
-// The app's own typefaces, self-hosted: General Sans for text, Gotham Ultra Italic for the wordmark.
+// The app's own typefaces, self-hosted: General Sans for text, Montserrat Black Italic for the wordmark.
 export const generalSans = localFont({
     src: [
         { path: "../fonts/GeneralSans-Regular.otf", weight: "400", style: "normal" },
@@ -12,8 +13,11 @@ export const generalSans = localFont({
     display: "swap",
 });
 
-export const gotham = localFont({
-    src: [{ path: "../fonts/Gotham-UltraItalic.ttf", weight: "900", style: "italic" }],
+// Downloaded from Google Fonts at build time and served from this site (SIL Open Font License).
+export const brandFont = Montserrat({
+    weight: "900",
+    style: "italic",
+    subsets: ["latin"],
     variable: "--font-brand",
     display: "swap",
     preload: false,
