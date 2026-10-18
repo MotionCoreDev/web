@@ -1,0 +1,180 @@
+# MotionCore website on Netlify. The landing page is a static export (apps/landing-page/out);
+# no server functions are involved.
+
+[build]
+  base = ""
+  command = "pnpm --filter @startup/landing-page build"
+  publish = "apps/landing-page/out"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NEXT_TELEMETRY_DISABLED = "1"
+  # The site is plain files, so Netlify's Next.js runtime is not needed.
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+
+# ---------------------------------------------------------------------------
+# "/" -> the visitor's language, from the Accept-Language header.
+# force = true, because public/index.html (the no-JS fallback) also lives at "/".
+# ---------------------------------------------------------------------------
+
+[[redirects]]
+  from = "/"
+  to = "/tr/"
+  status = 302
+  force = true
+  conditions = { Language = ["tr"] }
+
+[[redirects]]
+  from = "/"
+  to = "/de/"
+  status = 302
+  force = true
+  conditions = { Language = ["de"] }
+
+[[redirects]]
+  from = "/"
+  to = "/es/"
+  status = 302
+  force = true
+  conditions = { Language = ["es"] }
+
+[[redirects]]
+  from = "/"
+  to = "/en/"
+  status = 302
+  force = true
+
+# ---------------------------------------------------------------------------
+# Short links without a language (/privacy, /delete-account ...), used by the app, the store
+# listing and the old GitHub Pages site. Same language choice as above, English otherwise.
+# ---------------------------------------------------------------------------
+
+[[redirects]]
+  from = "/privacy"
+  to = "/tr/privacy/"
+  status = 302
+  conditions = { Language = ["tr"] }
+[[redirects]]
+  from = "/privacy"
+  to = "/de/privacy/"
+  status = 302
+  conditions = { Language = ["de"] }
+[[redirects]]
+  from = "/privacy"
+  to = "/es/privacy/"
+  status = 302
+  conditions = { Language = ["es"] }
+[[redirects]]
+  from = "/privacy"
+  to = "/en/privacy/"
+  status = 302
+
+[[redirects]]
+  from = "/terms"
+  to = "/tr/terms/"
+  status = 302
+  conditions = { Language = ["tr"] }
+[[redirects]]
+  from = "/terms"
+  to = "/de/terms/"
+  status = 302
+  conditions = { Language = ["de"] }
+[[redirects]]
+  from = "/terms"
+  to = "/es/terms/"
+  status = 302
+  conditions = { Language = ["es"] }
+[[redirects]]
+  from = "/terms"
+  to = "/en/terms/"
+  status = 302
+
+[[redirects]]
+  from = "/support"
+  to = "/tr/support/"
+  status = 302
+  conditions = { Language = ["tr"] }
+[[redirects]]
+  from = "/support"
+  to = "/de/support/"
+  status = 302
+  conditions = { Language = ["de"] }
+[[redirects]]
+  from = "/support"
+  to = "/es/support/"
+  status = 302
+  conditions = { Language = ["es"] }
+[[redirects]]
+  from = "/support"
+  to = "/en/support/"
+  status = 302
+
+[[redirects]]
+  from = "/delete-account"
+  to = "/tr/delete-account/"
+  status = 302
+  conditions = { Language = ["tr"] }
+[[redirects]]
+  from = "/delete-account"
+  to = "/de/delete-account/"
+  status = 302
+  conditions = { Language = ["de"] }
+[[redirects]]
+  from = "/delete-account"
+  to = "/es/delete-account/"
+  status = 302
+  conditions = { Language = ["es"] }
+[[redirects]]
+  from = "/delete-account"
+  to = "/en/delete-account/"
+  status = 302
+
+# File names of the old GitHub Pages site (MotionCoreDev/legal).
+[[redirects]]
+  from = "/privacy.html"
+  to = "/privacy"
+  status = 301
+[[redirects]]
+  from = "/account-deletion.html"
+  to = "/delete-account"
+  status = 301
+[[redirects]]
+  from = "/account-deletion"
+  to = "/delete-account"
+  status = 301
+[[redirects]]
+  from = "/contact"
+  to = "/support"
+  status = 301
+
+# Must stay last: any path without a file gets the branded, four-language 404 page.
+# (Next.js writes its own unstyled 404.html into out/, so ours has a different name.)
+[[redirects]]
+  from = "/*"
+  to = "/not-found.html"
+  status = 404
+
+# ---------------------------------------------------------------------------
+# Headers
+# ---------------------------------------------------------------------------
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    # Next.js inlines its bootstrap scripts and framer-motion sets inline styles, hence 'unsafe-inline'.
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
+
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
