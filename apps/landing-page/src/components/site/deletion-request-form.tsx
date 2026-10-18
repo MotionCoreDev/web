@@ -140,7 +140,7 @@ export function DeletionRequestForm({ locale, form }: Props) {
                     checked={scope === "data"}
                     onSelect={() => setScope("data")}
                     title={form.scopeData}
-                    help={form.scopeDataHelp}
+                    help={scope === "data" ? form.scopeDataHelp : ""}
                     value="data"
                 >
                     {scope === "data" && (
@@ -233,7 +233,7 @@ function ScopeOption({
                 <input type="radio" name="scope" value={value} checked={checked} onChange={onSelect} className="mt-1 size-4 shrink-0 accent-[hsl(var(--primary))]" />
                 <span>
                     <span className="block text-sm font-medium text-foreground">{title}</span>
-                    <span className="mt-0.5 block text-xs text-muted-foreground">{help}</span>
+                    {help && <span className="mt-0.5 block text-xs text-muted-foreground">{help}</span>}
                 </span>
             </label>
             {children}
