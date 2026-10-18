@@ -1,0 +1,24 @@
+<!doctype html>
+<!--
+  Netlify Forms reads this file at deploy time to register the "account-deletion" form.
+  The visible form is rendered by React on /{locale}/delete-account/ and posts here with fetch.
+  Keep the field names in sync with src/components/site/deletion-request-form.tsx.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <title>MotionCore forms</title>
+  </head>
+  <body>
+    <form name="account-deletion" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="bot-field" />
+      <input type="email" name="email" />
+      <input type="text" name="scope" />
+      <input type="text" name="data" />
+      <textarea name="details"></textarea>
+      <input type="text" name="language" />
+      <input type="text" name="confirmed" />
+    </form>
+  </body>
+</html>
