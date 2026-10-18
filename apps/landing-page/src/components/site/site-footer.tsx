@@ -68,9 +68,9 @@ export function SiteFooter({ locale, footer, common }: Props) {
                             </ul>
                         </div>
                     ))}
-                    <div>
+                    <div className="col-span-2 md:col-span-1">
                         <h3 className="mb-4 text-xs font-semibold uppercase tracking-widest text-foreground">{common.emailUs}</h3>
-                        <a href={`mailto:${BRAND_CONFIG.email}`} className="break-all text-sm text-muted-foreground transition-colors hover:text-foreground">
+                        <a href={`mailto:${BRAND_CONFIG.email}`} className="break-words text-sm text-muted-foreground transition-colors hover:text-foreground">
                             {BRAND_CONFIG.email}
                         </a>
                     </div>
