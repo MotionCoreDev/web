@@ -310,7 +310,7 @@ const de: Dictionary = {
     legal: {
         privacy: {
             title: "Datenschutzerklärung",
-            effective: "18. Oktober 2026",
+            effective: "31. Oktober 2026",
             intro: "Diese Erklärung beschreibt, welche Daten die MotionCore-App erhebt, warum wir sie verarbeiten, wer uns dabei hilft und wie du deine Rechte ausübst.",
             sections: [
                 {
@@ -325,6 +325,7 @@ const de: Dictionary = {
                             ["Alter, Größe, Gewicht, Zielgewicht (optional)", "Um deine Statistiken zu personalisieren."],
                             ["Trainingsdaten (Übung, Wiederholungen, Dauer, Technikergebnisse, Zeitstempel)", "Um deinen Fortschritt zu verfolgen, Ranglistenpunkte zu berechnen und die Wertung fair zu halten."],
                             ["Duelldaten (Gegner, Punkte, Ergebnis, Trophäenwertung)", "Um Duelle, Matchmaking und Ranglisten zu betreiben."],
+                            ["Optionale App-Analysen (nur mit deiner Zustimmung): Bildschirmnamen, Übungs-IDs, Trainingsereignisse, Wiederholungen, Sitzungsdauer und Leistungswerte", "Um die App-Nutzung zu verstehen und die App zu verbessern."],
                             ["Fehlerberichte und Feedback, die du sendest", "Um Probleme zu beheben und dir zu antworten."],
                             ["Absturz- und Fehlerberichte (Gerätemodell, Betriebssystem- und App-Version, technische Fehlerdetails)", "Um Abstürze zu finden und zu beheben. Sie enthalten weder deinen Namen noch deine E-Mail-Adresse oder Kamerabilder."],
                         ),
@@ -351,6 +352,7 @@ const de: Dictionary = {
                             "Um die Wertung fair zu halten, etwa indem unplausible oder überlappende Trainings verworfen werden",
                             "Um Abstürze und gemeldete Probleme zu untersuchen und deine Anfragen zu beantworten",
                         ),
+                        p("Optionale Produktanalysen werden nur erfasst, wenn du aktiv zustimmst. Du kannst deine Auswahl jederzeit unter **Einstellungen → Berechtigungen** ändern. Eine Ablehnung oder ein Widerruf wirkt sich nicht auf dein Konto oder die App-Funktionen aus."),
                         p("Wir nutzen deine Daten nicht für Werbung und verkaufen sie niemals."),
                     ],
                 },
@@ -372,7 +374,9 @@ const de: Dictionary = {
                             ["Google", "Anmeldung, wenn du dich mit Google anmeldest; Vertrieb der App über Google Play"],
                             ["Apple", "Anmeldung, wenn du dich mit Apple anmeldest (iOS)"],
                             ["Sentry", "Absturz- und Fehlerberichte"],
+                            ["PostHog (EU)", "Verarbeitung optionaler Produktanalyse-Ereignisse nur nach deiner Zustimmung. Die IP-Anonymisierung ist für unser Projekt aktiviert."],
                         ),
+                        p("Analysedaten werden erst nach deiner Zustimmung an den EU-Dienst von PostHog gesendet. Ereignisse können Bildschirmnamen, Übungs-IDs, abgeschlossene Trainings, Wiederholungen, Dauer, begrenzte Leistungswerte und Funktionsinteraktionen enthalten. Nach der Anmeldung werden die Ereignisse deiner internen Konto-ID zugeordnet, nicht deinem Namen oder deiner E-Mail-Adresse. Passwörter, Kamerabilder und Körperkoordinaten sind nicht Teil der Analyseereignisse. Wenn du Analysen ausschaltest, endet die zukünftige Erfassung und noch nicht gesendete Ereignisse auf deinem Gerät werden gelöscht. Bereits bei PostHog eingegangene Ereignisse werden dadurch nicht gelöscht."),
                         p("Diese Anbieter verarbeiten Daten nur, um ihre Dienste für uns zu erbringen. Einige verarbeiten Daten möglicherweise außerhalb deines Landes; wo gesetzlich erforderlich, geschieht das mit geeigneten Garantien wie Standardvertragsklauseln."),
                     ],
                 },
@@ -380,7 +384,7 @@ const de: Dictionary = {
                     id: "retention",
                     title: "5. Speicherdauer",
                     blocks: [
-                        p("Wir speichern deine Daten, solange dein Konto besteht. Wenn du dein Konto löschst, werden deine Daten endgültig gelöscht; das Entfernen aus Backups dauert bis zu 30 Tage. Absturzberichte werden höchstens 90 Tage lang gespeichert."),
+                        p("Konto- und Trainingsdaten speichern wir, solange dein Konto besteht. Wenn du dein Konto löschst, werden diese Daten gelöscht; das Entfernen aus Backups dauert bis zu 30 Tage. Absturzberichte werden höchstens 90 Tage lang gespeichert. Wenn du zustimmst, werden PostHog-Analyseereignisse gemäß der für unser Projekt konfigurierten Speicherdauer gespeichert. Das Ausschalten der Analyse löscht keine bereits bei PostHog eingegangenen Ereignisse; auch das Löschen deines MotionCore-Kontos entfernt sie nicht automatisch. Für eine Löschanfrage zu Analysedaten kontaktiere uns unter {email}."),
                     ],
                 },
                 {

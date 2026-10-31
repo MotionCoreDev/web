@@ -310,7 +310,7 @@ const en: Dictionary = {
     legal: {
         privacy: {
             title: "Privacy Policy",
-            effective: "18 October 2026",
+            effective: "31 October 2026",
             intro: "This policy explains what data the MotionCore app collects, why we process it, who helps us process it and how you can exercise your rights.",
             sections: [
                 {
@@ -325,6 +325,7 @@ const en: Dictionary = {
                             ["Age, height, weight, target weight (optional)", "To personalise your statistics."],
                             ["Workout records (exercise, reps, duration, form results, timestamps)", "To track your progress, calculate leaderboard scores and keep scoring fair."],
                             ["Battle records (opponent, scores, result, trophy rating)", "To run matches, matchmaking and rankings."],
+                            ["Optional app analytics (only if you opt in): screen names, exercise IDs, workout events, reps, session duration and performance metrics", "To understand how the app is used and improve it."],
                             ["Bug reports and feedback you send", "To fix problems and reply to you."],
                             ["Crash and error reports (device model, operating system and app version, technical error details)", "To find and fix crashes. They don't contain your name, email address or camera images."],
                         ),
@@ -351,6 +352,7 @@ const en: Dictionary = {
                             "To keep scoring fair, for example by discarding implausible or overlapping sessions",
                             "To investigate crashes and the problems you report, and to answer your requests",
                         ),
+                        p("Optional product analytics are collected only after you actively opt in. You can change your choice at any time in **Settings → Permissions**. Declining or withdrawing consent does not affect your account or app features."),
                         p("We don't use your data for advertising and we never sell it."),
                     ],
                 },
@@ -372,7 +374,9 @@ const en: Dictionary = {
                             ["Google", "Sign-in, if you choose to continue with Google; app distribution through Google Play"],
                             ["Apple", "Sign-in, if you choose to continue with Apple (iOS)"],
                             ["Sentry", "Crash and error reporting"],
+                            ["PostHog (EU)", "Optional product analytics event processing. IP anonymization is enabled for our project."],
                         ),
+                        p("Analytics is sent to PostHog's EU service only after you opt in. Events can include screen names, exercise IDs, workout completions, repetitions, duration, limited performance measurements and feature interactions. After signup, events are associated with an internal account ID, not your name or email address. Analytics events do not include your password, camera images or body coordinates. Turning analytics off stops future collection and clears events still waiting on your device; it does not delete events already received by PostHog."),
                         p("These providers process data only to provide their services to us. Some of them may process data outside your country; where the law requires it, this happens under appropriate safeguards such as standard contractual clauses."),
                     ],
                 },
@@ -380,7 +384,7 @@ const en: Dictionary = {
                     id: "retention",
                     title: "5. How long we keep data",
                     blocks: [
-                        p("We keep your data for as long as your account exists. When you delete your account, your data is deleted permanently; removing it from backups takes up to 30 days. Crash reports are kept for at most 90 days."),
+                        p("We keep account and workout data for as long as your account exists. When you delete your account, this data is deleted; removing it from backups takes up to 30 days. Crash reports are kept for at most 90 days. If you opt in, PostHog analytics events follow the retention period configured for our PostHog project. Turning analytics off does not delete events already received, and deleting your MotionCore account does not automatically remove those events. Contact {email} to request deletion of analytics data."),
                     ],
                 },
                 {
