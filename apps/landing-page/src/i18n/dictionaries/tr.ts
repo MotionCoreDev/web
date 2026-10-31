@@ -310,7 +310,7 @@ const tr: Dictionary = {
     legal: {
         privacy: {
             title: "Gizlilik Politikası",
-            effective: "18 Ekim 2026",
+            effective: "31 Ekim 2026",
             intro: "Bu politika, MotionCore uygulamasının hangi verileri topladığını, bunları neden işlediğimizi, işlemede bize kimlerin yardım ettiğini ve haklarınızı nasıl kullanabileceğinizi açıklar.",
             sections: [
                 {
@@ -325,6 +325,7 @@ const tr: Dictionary = {
                             ["Yaş, boy, kilo, hedef kilo (isteğe bağlı)", "İstatistiklerinizi kişiselleştirmek."],
                             ["Antrenman kayıtları (hareket, tekrar, süre, form sonuçları, zaman damgaları)", "İlerlemenizi takip etmek, sıralama puanlarını hesaplamak ve puanlamayı adil tutmak."],
                             ["Düello kayıtları (rakip, skorlar, sonuç, kupa puanı)", "Maçları, eşleştirmeyi ve sıralamaları yürütmek."],
+                            ["İsteğe bağlı uygulama analitiği (yalnızca izin verirseniz): ekran adları, hareket kimlikleri, antrenman olayları, tekrarlar, oturum süresi ve performans ölçümleri", "Uygulamanın nasıl kullanıldığını anlamak ve iyileştirmek."],
                             ["Gönderdiğiniz hata bildirimleri ve geri bildirimler", "Sorunları çözmek ve size yanıt vermek."],
                             ["Çökme ve hata raporları (cihaz modeli, işletim sistemi ve uygulama sürümü, teknik hata ayrıntıları)", "Çökmeleri bulmak ve düzeltmek. Adınızı, e-posta adresinizi ya da kamera görüntülerinizi içermez."],
                         ),
@@ -351,6 +352,7 @@ const tr: Dictionary = {
                             "Puanlamayı adil tutmak; örneğin gerçekçi olmayan ya da çakışan antrenmanları saymamak",
                             "Çökmeleri ve bildirdiğiniz sorunları incelemek, taleplerinize yanıt vermek",
                         ),
+                        p("İsteğe bağlı ürün analitiği yalnızca açıkça izin verdiğinizde toplanır. Tercihinizi istediğiniz zaman **Ayarlar → İzinler** bölümünden değiştirebilirsiniz. Reddetmeniz veya izni geri çekmeniz hesabınızı ya da uygulama özelliklerini etkilemez."),
                         p("Verilerinizi reklam amacıyla kullanmıyor ve asla satmıyoruz."),
                     ],
                 },
@@ -372,7 +374,9 @@ const tr: Dictionary = {
                             ["Google", "Google ile devam etmeyi seçerseniz giriş; Google Play üzerinden uygulama dağıtımı"],
                             ["Apple", "Apple ile devam etmeyi seçerseniz giriş (iOS)"],
                             ["Sentry", "Çökme ve hata raporlama"],
+                            ["PostHog (AB)", "Yalnızca izin verdiğiniz isteğe bağlı ürün analitiği olaylarının işlenmesi. Projemizde IP anonimleştirme açıktır."],
                         ),
+                        p("Analitik verileri PostHog'un Avrupa hizmetine yalnızca izin verdikten sonra gönderilir. Olaylarda ekran adları, hareket kimlikleri, antrenman tamamlanması, tekrar sayısı, süre, sınırlı performans ölçümleri ve özellik etkileşimleri bulunabilir. Kayıt olduktan sonra olaylarınız adınız veya e-posta adresiniz yerine hesabınızın dahili kimliğiyle ilişkilendirilir. Analitik olaylarına şifreniz, kamera görüntüleriniz veya vücut koordinatlarınız eklenmez. Analitiği kapatmanız yeni veri gönderimini durdurur ve cihazınızda bekleyen olayları siler; PostHog'a daha önce ulaşmış olayları silmez."),
                         p("Bu sağlayıcılar verileri yalnızca bize hizmet sunmak için işler. Bazıları verileri bulunduğunuz ülkenin dışında işleyebilir; mevzuatın gerektirdiği durumlarda bu, standart sözleşme hükümleri gibi uygun güvenceler altında yapılır."),
                     ],
                 },
@@ -380,7 +384,7 @@ const tr: Dictionary = {
                     id: "retention",
                     title: "5. Saklama süresi",
                     blocks: [
-                        p("Verilerinizi hesabınız var olduğu sürece saklarız. Hesabınızı sildiğinizde verileriniz kalıcı olarak silinir; yedeklerden temizlenmesi en geç 30 gün sürer. Çökme raporları sınırlı bir süre, en fazla 90 gün saklanır."),
+                        p("Hesap ve antrenman verilerinizi hesabınız var olduğu sürece saklarız. Hesabınızı sildiğinizde bu veriler silinir; yedeklerden temizlenmesi en geç 30 gün sürer. Çökme raporları en fazla 90 gün saklanır. İzin verirseniz PostHog analitik olayları projemiz için yapılandırılmış saklama süresine göre tutulur. Analitiği kapatmanız daha önce PostHog'a ulaşmış olayları silmez; MotionCore hesabınızı silmeniz de bu olayları otomatik olarak kaldırmaz. Analitik verilerinin silinmesini talep etmek için {email} adresinden bize ulaşabilirsiniz."),
                     ],
                 },
                 {

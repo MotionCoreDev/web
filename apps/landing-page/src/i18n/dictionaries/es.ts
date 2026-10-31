@@ -310,7 +310,7 @@ const es: Dictionary = {
     legal: {
         privacy: {
             title: "Política de privacidad",
-            effective: "18 de octubre de 2026",
+            effective: "31 de octubre de 2026",
             intro: "Esta política explica qué datos recoge la app MotionCore, por qué los tratamos, quién nos ayuda a tratarlos y cómo puedes ejercer tus derechos.",
             sections: [
                 {
@@ -325,6 +325,7 @@ const es: Dictionary = {
                             ["Edad, altura, peso, peso objetivo (opcional)", "Para personalizar tus estadísticas."],
                             ["Registros de entrenamiento (ejercicio, repeticiones, duración, resultados de técnica, marcas de tiempo)", "Para seguir tu progreso, calcular la puntuación de las clasificaciones y mantener una puntuación justa."],
                             ["Registros de duelos (rival, puntuaciones, resultado, nivel de trofeos)", "Para organizar duelos, emparejamientos y clasificaciones."],
+                            ["Analítica opcional de la app (solo si das permiso): nombres de pantallas, IDs de ejercicios, eventos de entrenamiento, repeticiones, duración de sesiones y métricas de rendimiento", "Para entender cómo se usa la app y mejorarla."],
                             ["Informes de errores y comentarios que envías", "Para resolver problemas y responderte."],
                             ["Informes de fallos y errores (modelo del dispositivo, versión del sistema y de la app, detalles técnicos del error)", "Para encontrar y corregir fallos. No incluyen tu nombre, tu correo ni imágenes de la cámara."],
                         ),
@@ -351,6 +352,7 @@ const es: Dictionary = {
                             "Para mantener una puntuación justa, por ejemplo descartando sesiones poco plausibles o solapadas",
                             "Para investigar fallos y los problemas que nos comunicas, y responder a tus solicitudes",
                         ),
+                        p("La analítica opcional del producto solo se recopila si das tu consentimiento activo. Puedes cambiarlo cuando quieras en **Ajustes → Permisos**. Rechazar o retirar el consentimiento no afecta a tu cuenta ni a las funciones de la app."),
                         p("No usamos tus datos para publicidad y nunca los vendemos."),
                     ],
                 },
@@ -372,7 +374,9 @@ const es: Dictionary = {
                             ["Google", "Inicio de sesión si eliges continuar con Google; distribución de la app en Google Play"],
                             ["Apple", "Inicio de sesión si eliges continuar con Apple (iOS)"],
                             ["Sentry", "Informes de fallos y errores"],
+                            ["PostHog (UE)", "Procesamiento de eventos opcionales de analítica del producto solo si das permiso. La anonimización de IP está activada en nuestro proyecto."],
                         ),
+                        p("Los datos de analítica solo se envían al servicio europeo de PostHog después de que des tu permiso. Los eventos pueden incluir nombres de pantallas, IDs de ejercicios, entrenamientos completados, repeticiones, duración, métricas limitadas de rendimiento e interacciones con funciones. Después de registrarte, los eventos se asocian a un ID interno de cuenta, no a tu nombre ni a tu correo. Los eventos de analítica no incluyen tu contraseña, imágenes de cámara ni coordenadas corporales. Si desactivas la analítica, se detiene la recopilación futura y se borran los eventos aún pendientes en tu dispositivo; no se borran los que PostHog ya recibió."),
                         p("Estos proveedores solo tratan datos para prestarnos sus servicios. Algunos pueden tratarlos fuera de tu país; cuando la ley lo exige, lo hacen con garantías adecuadas como las cláusulas contractuales tipo."),
                     ],
                 },
@@ -380,7 +384,7 @@ const es: Dictionary = {
                     id: "retention",
                     title: "5. Cuánto tiempo conservamos los datos",
                     blocks: [
-                        p("Conservamos tus datos mientras exista tu cuenta. Cuando la eliminas, tus datos se borran de forma definitiva; eliminarlos de las copias de seguridad tarda hasta 30 días. Los informes de fallos se guardan durante un tiempo limitado, como máximo 90 días."),
+                        p("Conservamos los datos de tu cuenta y tus entrenamientos mientras exista tu cuenta. Cuando la eliminas, esos datos se borran; las copias de seguridad se limpian en un plazo de hasta 30 días. Los informes de fallos se guardan como máximo 90 días. Si das permiso, los eventos analíticos de PostHog se conservan según el periodo configurado para nuestro proyecto. Desactivar la analítica no borra los eventos que PostHog ya recibió, y eliminar tu cuenta de MotionCore tampoco los elimina automáticamente. Para solicitar la eliminación de datos analíticos, escríbenos a {email}."),
                     ],
                 },
                 {
