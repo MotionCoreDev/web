@@ -166,12 +166,14 @@ function page(lang, T) {
         font-size: 12px; font-weight: 700; letter-spacing: 0.12em; }
       h1 { font-size: 30px; line-height: 1.15; margin: 14px 0 8px; font-weight: 700; }
       p { color: #98a2b3; margin: 6px 0; line-height: 1.5; font-size: 15px; }
-      .code-card { margin: 22px auto 0; padding: 16px 20px; border-radius: 22px; background: #141925; border: 1px solid #2a3142; }
-      .code-label { font-size: 11px; letter-spacing: 0.22em; color: #98a2b3; font-weight: 700; }
-      .code { font-size: 36px; letter-spacing: 0.22em; font-weight: 700; margin-top: 6px; font-variant-numeric: tabular-nums;
+      /* The room code, small, where it is needed: in the box that says what to do when the link does not open. */
+      .code-row { display: flex; align-items: center; gap: 12px; margin-top: 12px; padding-top: 12px;
+        border-top: 1px solid #1f2532; }
+      .code-label { font-size: 11px; letter-spacing: 0.18em; color: #98a2b3; font-weight: 700; }
+      .code { font-size: 18px; letter-spacing: 0.14em; font-weight: 700; color: #f4f3d4; font-variant-numeric: tabular-nums;
         user-select: all; }
-      .copy { margin-top: 12px; padding: 9px 18px; border-radius: 999px; border: 1px solid rgba(244, 243, 212, 0.25);
-        background: transparent; color: #f4f3d4; font: 700 14px "Figtree", system-ui, sans-serif; cursor: pointer; }
+      .copy { margin-left: auto; padding: 6px 14px; border-radius: 999px; border: 1px solid rgba(244, 243, 212, 0.25);
+        background: transparent; color: #f4f3d4; font: 700 13px "Figtree", system-ui, sans-serif; cursor: pointer; }
       .copy.done { border-color: rgba(16, 185, 129, 0.55); color: #10b981; }
       .open { display: block; margin-top: 22px; padding: 16px; border-radius: 999px; background: #dc1612; color: #fff;
         font-weight: 700; font-size: 16px; text-decoration: none; }
@@ -191,17 +193,16 @@ function page(lang, T) {
       <h1>${T.title}</h1>
       <p>${T.lead}</p>
 
-      <div class="code-card" id="code-card" hidden>
-        <div class="code-label">${T.codeLabel}</div>
-        <div class="code" id="code"></div>
-        <button class="copy" id="copy" type="button" hidden>${T.copy}</button>
-      </div>
-
       <a class="open" id="open" href="motioncore://duel/">${T.open}</a>
 
       <div class="steps">
         <p>${T.stepsTitle}</p>
         <p>${T.steps}</p>
+        <div class="code-row" id="code-row" hidden>
+          <span class="code-label">${T.codeLabel}</span>
+          <span class="code" id="code"></span>
+          <button class="copy" id="copy" type="button" hidden>${T.copy}</button>
+        </div>
       </div>
 
       <a class="store" href="${STORE}">
@@ -219,7 +220,7 @@ function page(lang, T) {
         var open = document.getElementById("open");
         if (code) {
           document.getElementById("code").textContent = code;
-          document.getElementById("code-card").hidden = false;
+          document.getElementById("code-row").hidden = false;
           // A button to copy the code, for typing it in the app when the link does not open it.
           var copy = document.getElementById("copy");
           if (navigator.clipboard && window.isSecureContext) {
