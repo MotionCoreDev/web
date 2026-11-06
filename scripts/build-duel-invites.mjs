@@ -111,7 +111,6 @@ const TEXTS = {
 const attr = (value) => value.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
 
 function page(lang, T) {
-  const url = `${SITE}/${lang}/duel/`;
   const image = `${SITE}/images/og-duel-${lang}.png`;
   return `<!doctype html>
 <!--
@@ -131,11 +130,11 @@ function page(lang, T) {
     <meta name="description" content="${attr(T.ogDescription)}" />
 
     <meta property="og:type" content="website" />
+    <!-- No og:url: every room has its own address (with its code), and Facebook would send clicks to og:url. -->
     <meta property="og:site_name" content="MotionCore" />
     <meta property="og:locale" content="${T.locale}" />
     <meta property="og:title" content="${attr(T.ogTitle)}" />
     <meta property="og:description" content="${attr(T.ogDescription)}" />
-    <meta property="og:url" content="${url}" />
     <meta property="og:image" content="${image}" />
     <meta property="og:image:secure_url" content="${image}" />
     <meta property="og:image:type" content="image/png" />
