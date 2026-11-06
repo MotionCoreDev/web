@@ -62,8 +62,8 @@ dashboard and are emailed to the address set up there.
 
 1. In Netlify, choose **Add new site → Import an existing project**, then pick `MotionCoreDev/web`.
    `netlify.toml` already sets the build command, the publish directory and Node 22.
-2. Under **Domain management**, add the site's domain, `motioncore.fit` (registered at GoDaddy, its DNS pointing
-   to Netlify), and make it the primary domain.
+2. Under **Site configuration → Site details**, rename the site (for example `motioncore`, which
+   gives `motioncore.netlify.app`).
 3. Under **Forms**, turn on form detection and redeploy. Then, under **Forms → Form notifications**,
    add an email notification for `account-deletion`.
 
