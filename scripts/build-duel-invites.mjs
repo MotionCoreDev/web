@@ -39,6 +39,8 @@ const TEXTS = {
     title: "Düelloya davet edildin!",
     lead: "Arkadaşın seni canlı bir 1v1 fitness düellosuna çağırıyor. Kameranı kur, tekrarlarını say, kazanan belli olsun.",
     codeLabel: "ODA KODU",
+    copy: "Kodu kopyala",
+    copied: "Kopyalandı",
     open: "Uygulamada aç",
     stepsTitle: "<b>Bağlantı açılmazsa</b>",
     steps: "MotionCore'u aç, <b>VS Fitness Arenası → Arkadaşınla oyna → Kodla katıl</b> yolunu izle ve oda kodunu yaz.",
@@ -56,6 +58,8 @@ const TEXTS = {
     title: "You're invited to a duel!",
     lead: "Your friend is calling you to a live 1v1 fitness duel. Set up your camera, count your reps, may the best win.",
     codeLabel: "ROOM CODE",
+    copy: "Copy code",
+    copied: "Copied",
     open: "Open in the app",
     stepsTitle: "<b>If the link doesn't open</b>",
     steps: "Open MotionCore, go to <b>VS Fitness Arena → Play a friend → Join with a code</b> and type the room code.",
@@ -73,6 +77,8 @@ const TEXTS = {
     title: "Du bist zu einem Duell eingeladen!",
     lead: "Dein Freund fordert dich zu einem Live-1v1-Fitnessduell heraus. Kamera aufstellen, Wiederholungen zählen, der Bessere gewinnt.",
     codeLabel: "RAUMCODE",
+    copy: "Code kopieren",
+    copied: "Kopiert",
     open: "In der App öffnen",
     stepsTitle: "<b>Falls der Link nicht öffnet</b>",
     steps: "Öffne MotionCore, geh zu <b>VS Fitness Arena → Gegen Freund spielen → Mit Code beitreten</b> und gib den Raumcode ein.",
@@ -90,6 +96,8 @@ const TEXTS = {
     title: "¡Te han invitado a un duelo!",
     lead: "Tu amigo te reta a un duelo de fitness 1v1 en directo. Coloca la cámara, cuenta tus repeticiones y que gane el mejor.",
     codeLabel: "CÓDIGO DE SALA",
+    copy: "Copiar código",
+    copied: "Copiado",
     open: "Abrir en la app",
     stepsTitle: "<b>Si el enlace no se abre</b>",
     steps: "Abre MotionCore, ve a <b>VS Fitness Arena → Jugar con un amigo → Unirse con código</b> y escribe el código de sala.",
@@ -162,6 +170,9 @@ function page(lang, T) {
       .code-label { font-size: 11px; letter-spacing: 0.22em; color: #98a2b3; font-weight: 700; }
       .code { font-size: 36px; letter-spacing: 0.22em; font-weight: 700; margin-top: 6px; font-variant-numeric: tabular-nums;
         user-select: all; }
+      .copy { margin-top: 12px; padding: 9px 18px; border-radius: 999px; border: 1px solid rgba(244, 243, 212, 0.25);
+        background: transparent; color: #f4f3d4; font: 700 14px "Figtree", system-ui, sans-serif; cursor: pointer; }
+      .copy.done { border-color: rgba(16, 185, 129, 0.55); color: #10b981; }
       .open { display: block; margin-top: 22px; padding: 16px; border-radius: 999px; background: #dc1612; color: #fff;
         font-weight: 700; font-size: 16px; text-decoration: none; }
       .open:active { background: #c01210; }
@@ -183,6 +194,7 @@ function page(lang, T) {
       <div class="code-card" id="code-card" hidden>
         <div class="code-label">${T.codeLabel}</div>
         <div class="code" id="code"></div>
+        <button class="copy" id="copy" type="button" hidden>${T.copy}</button>
       </div>
 
       <a class="open" id="open" href="motioncore://duel/">${T.open}</a>
@@ -208,6 +220,18 @@ function page(lang, T) {
         if (code) {
           document.getElementById("code").textContent = code;
           document.getElementById("code-card").hidden = false;
+          // A button to copy the code, for typing it in the app when the link does not open it.
+          var copy = document.getElementById("copy");
+          if (navigator.clipboard && window.isSecureContext) {
+            copy.hidden = false;
+            copy.addEventListener("click", function () {
+              navigator.clipboard.writeText(code).then(function () {
+                copy.textContent = ${JSON.stringify(T.copied)};
+                copy.className = "copy done";
+                setTimeout(function () { copy.textContent = ${JSON.stringify(T.copy)}; copy.className = "copy"; }, 1600);
+              }, function () {});
+            });
+          }
         }
         // Android opens the app straight into the room, or Google Play when it is not installed.
         if (/Android/i.test(navigator.userAgent)) {

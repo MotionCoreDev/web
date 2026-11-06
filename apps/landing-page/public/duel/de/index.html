@@ -55,6 +55,9 @@
       .code-label { font-size: 11px; letter-spacing: 0.22em; color: #98a2b3; font-weight: 700; }
       .code { font-size: 36px; letter-spacing: 0.22em; font-weight: 700; margin-top: 6px; font-variant-numeric: tabular-nums;
         user-select: all; }
+      .copy { margin-top: 12px; padding: 9px 18px; border-radius: 999px; border: 1px solid rgba(244, 243, 212, 0.25);
+        background: transparent; color: #f4f3d4; font: 700 14px "Figtree", system-ui, sans-serif; cursor: pointer; }
+      .copy.done { border-color: rgba(16, 185, 129, 0.55); color: #10b981; }
       .open { display: block; margin-top: 22px; padding: 16px; border-radius: 999px; background: #dc1612; color: #fff;
         font-weight: 700; font-size: 16px; text-decoration: none; }
       .open:active { background: #c01210; }
@@ -76,6 +79,7 @@
       <div class="code-card" id="code-card" hidden>
         <div class="code-label">RAUMCODE</div>
         <div class="code" id="code"></div>
+        <button class="copy" id="copy" type="button" hidden>Code kopieren</button>
       </div>
 
       <a class="open" id="open" href="motioncore://duel/">In der App öffnen</a>
@@ -101,6 +105,18 @@
         if (code) {
           document.getElementById("code").textContent = code;
           document.getElementById("code-card").hidden = false;
+          // A button to copy the code, for typing it in the app when the link does not open it.
+          var copy = document.getElementById("copy");
+          if (navigator.clipboard && window.isSecureContext) {
+            copy.hidden = false;
+            copy.addEventListener("click", function () {
+              navigator.clipboard.writeText(code).then(function () {
+                copy.textContent = "Kopiert";
+                copy.className = "copy done";
+                setTimeout(function () { copy.textContent = "Code kopieren"; copy.className = "copy"; }, 1600);
+              }, function () {});
+            });
+          }
         }
         // Android opens the app straight into the room, or Google Play when it is not installed.
         if (/Android/i.test(navigator.userAgent)) {
