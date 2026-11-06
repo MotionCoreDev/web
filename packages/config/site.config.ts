@@ -3,8 +3,12 @@
  * Texts that differ per language live in the landing page's dictionaries, not here.
  */
 
-/** Netlify sets URL to the site's primary address during builds; local builds fall back to it. */
-const SITE_URL = (process.env.URL ?? "https://motioncore.netlify.app").replace(/\/$/, "");
+/**
+ * The site's one address for search engines: canonical links, hreflang alternates, the sitemap and robots.txt.
+ * Fixed rather than Netlify's `URL`, because two Netlify sites build this repo (motioncore.fit and
+ * motioncore.netlify.app) and both should point search engines at motioncore.fit.
+ */
+const SITE_URL = "https://motioncore.fit";
 
 export const BRAND_CONFIG = {
     name: "MotionCore",

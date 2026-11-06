@@ -67,7 +67,8 @@ dashboard and are emailed to the address set up there.
 3. Under **Forms**, turn on form detection and redeploy. Then, under **Forms → Form notifications**,
    add an email notification for `account-deletion`.
 
-Netlify passes the site's address to the build as `URL`; canonical links and the sitemap use it.
+Canonical links, hreflang alternates and the sitemap always use `https://motioncore.fit`
+(`packages/config/site.config.ts`), also on the second site at `motioncore.netlify.app`.
 
 ## Assets
 
