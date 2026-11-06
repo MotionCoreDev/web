@@ -2,9 +2,8 @@
 //   apps/landing-page/public/duel/<lang>/index.html   served for https://motioncore.netlify.app/<lang>/duel/<CODE>
 //   apps/landing-page/public/images/og-duel-<lang>.png  (1200x630)
 // The app shares the link in the sender's language, so WhatsApp, Discord and others show the preview in that language
-// (crawlers do not run scripts, so each language needs its own static page). The image: the app icon and wordmark,
-// PRIVATE DUEL in the app's Figtree, a green and a red player ring with the brand red VS between them, on the app's
-// dark split background. Run from the repo root after changing a text or the layout, and commit the output:
+// (crawlers do not run scripts, so each language needs its own static page). The image: the app logo large in the
+// middle with its glow, the MotionCore wordmark and PRIVATE DUEL in the app's Figtree, on the app's dark background. Run from the repo root after changing a text or the layout, and commit the output:
 //   node scripts/build-duel-invites.mjs
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
@@ -250,32 +249,21 @@ const W = 1200;
 const H = 630;
 const CREAM = "#F4F3D4";
 
+// The logo in the middle (WhatsApp often shows only a square from the centre), glowing on the app's dark background.
+const LOGO = 240;
+const LOGO_CY = 196;
 const background = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#10B981" stop-opacity="0.05"/><stop offset="0.5" stop-color="#10B981" stop-opacity="0.2"/>
-      <stop offset="1" stop-color="#10B981" stop-opacity="0.04"/>
-    </linearGradient>
-    <linearGradient id="r" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#DC1612" stop-opacity="0.06"/><stop offset="0.5" stop-color="#DC1612" stop-opacity="0.26"/>
-      <stop offset="1" stop-color="#DC1612" stop-opacity="0.05"/>
-    </linearGradient>
-    <radialGradient id="glow" cx="0.5" cy="0.62" r="0.5">
-      <stop offset="0" stop-color="#DC1612" stop-opacity="0.35"/><stop offset="1" stop-color="#DC1612" stop-opacity="0"/>
+    <radialGradient id="glow" cx="0.5" cy="${LOGO_CY / H}" r="0.55">
+      <stop offset="0" stop-color="#DC1612" stop-opacity="0.42"/><stop offset="0.55" stop-color="#DC1612" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#DC1612" stop-opacity="0"/>
     </radialGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
   </defs>
   <rect width="${W}" height="${H}" fill="#0B0F1A"/>
-  <polygon points="0,0 660,0 540,${H} 0,${H}" fill="url(#g)"/>
-  <polygon points="660,0 ${W},0 ${W},${H} 540,${H}" fill="url(#r)"/>
-  <line x1="660" y1="0" x2="540" y2="${H}" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="3"/>
-  <circle cx="600" cy="392" r="210" fill="url(#glow)"/>
-  <!-- The two players: your green ring, the friend's red one waiting. -->
-  <circle cx="330" cy="392" r="86" fill="#141925" stroke="#10B981" stroke-width="8"/>
-  <circle cx="870" cy="392" r="86" fill="#141925" stroke="#DC1612" stroke-width="8" stroke-dasharray="22 14"/>
-  <circle cx="600" cy="392" r="58" fill="#DC1612" stroke="${CREAM}" stroke-opacity="0.4" stroke-width="5"/>
-  <!-- A simple head-and-shoulders mark in the player ring. -->
-  <circle cx="330" cy="370" r="26" fill="${CREAM}" fill-opacity="0.85"/>
-  <path d="M282 440 q48 -54 96 0 z" fill="${CREAM}" fill-opacity="0.85"/>
+  <rect width="${W}" height="${H}" fill="url(#glow)"/>
+  <rect x="${W / 2 - LOGO / 2}" y="${LOGO_CY - LOGO / 2 + 10}" width="${LOGO}" height="${LOGO}" rx="56" fill="#DC1612"
+    fill-opacity="0.55" filter="url(#blur)"/>
   <rect x="0" y="${H - 6}" width="${W}" height="6" fill="#DC1612"/>
 </svg>`);
 
@@ -285,8 +273,8 @@ const FAMILY = {
   "Figtree-SemiBold.ttf": "Figtree SemiBold",
   "Figtree-Medium.ttf": "Figtree Medium",
 };
-const text = (value, file, size, color) => sharp({ text: {
-  text: `<span foreground="${color}">${value.replace(/&/g, "&amp;").replace(/</g, "&lt;")}</span>`,
+const text = (value, file, size, color, spacing = 0) => sharp({ text: {
+  text: `<span foreground="${color}" letter_spacing="${Math.round(spacing * 1024)}">${value.replace(/&/g, "&amp;").replace(/</g, "&lt;")}</span>`,
   font: `${FAMILY[file]} ${size}`, fontfile: join(fonts, file), rgba: true, dpi: 72,
 } }).png().toBuffer();
 
@@ -297,31 +285,27 @@ const centered = async (buffer, cx, cy) => {
   return { input: buffer, left: Math.round(cx - width / 2), top: Math.round(cy - height / 2) };
 };
 
-const [icon, wordmark, vs, question] = await Promise.all([
-  sharp(join(publicDir, "images/app-icon.png")).resize(72, 72).composite([{
-    input: Buffer.from(`<svg width="72" height="72"><rect width="72" height="72" rx="18" ry="18"/></svg>`), blend: "dest-in",
+const [icon, wordmark] = await Promise.all([
+  sharp(join(publicDir, "images/app-icon.png")).resize(LOGO, LOGO).composite([{
+    input: Buffer.from(`<svg width="${LOGO}" height="${LOGO}"><rect width="${LOGO}" height="${LOGO}" rx="56" ry="56"/></svg>`),
+    blend: "dest-in",
   }]).png().toBuffer(),
-  text("MotionCore", "Figtree-Bold.ttf", 34, CREAM),
-  text("VS", "Figtree-Bold.ttf", 40, CREAM),
-  text("?", "Figtree-Bold.ttf", 76, "#98A2B3"),
+  text("MotionCore", "Figtree-Bold.ttf", 50, CREAM),
 ]);
-const wordmarkMeta = await meta(wordmark);
 
 for (const [lang, T] of Object.entries(TEXTS)) {
   const [title, subtitle, footer] = await Promise.all([
-    text(T.imageTitle, "Figtree-Bold.ttf", 88, CREAM),
-    text(T.imageSubtitle, "Figtree-SemiBold.ttf", 30, "#D0D5DD"),
-    text(T.imageFooter, "Figtree-Medium.ttf", 24, "#98A2B3"),
+    text(T.imageTitle, "Figtree-Bold.ttf", 30, "#F26F6C", 4),
+    text(T.imageSubtitle, "Figtree-SemiBold.ttf", 28, "#D0D5DD"),
+    text(T.imageFooter, "Figtree-Medium.ttf", 22, "#98A2B3"),
   ]);
   await sharp(background)
     .composite([
-      { input: icon, left: 56, top: 44 },
-      { input: wordmark, left: 144, top: Math.round(80 - wordmarkMeta.height / 2) },
-      await centered(title, W / 2, 170),
-      await centered(subtitle, W / 2, 248),
-      await centered(vs, 600, 392),
-      await centered(question, 870, 392),
-      await centered(footer, W / 2, 560),
+      { input: icon, left: W / 2 - LOGO / 2, top: LOGO_CY - LOGO / 2 },
+      await centered(wordmark, W / 2, 376),
+      await centered(title, W / 2, 430),
+      await centered(subtitle, W / 2, 492),
+      await centered(footer, W / 2, 566),
     ])
     .png({ compressionLevel: 9 })
     .toFile(join(publicDir, `images/og-duel-${lang}.png`));
