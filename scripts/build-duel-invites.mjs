@@ -159,13 +159,14 @@ function page(lang, T) {
       h1 { font-size: 30px; line-height: 1.15; margin: 14px 0 8px; font-weight: 700; }
       p { color: #98a2b3; margin: 6px 0; line-height: 1.5; font-size: 15px; }
       /* The room code, small, where it is needed: in the box that says what to do when the link does not open. */
-      .code-row { display: flex; align-items: center; gap: 12px; margin-top: 12px; padding-top: 12px;
-        border-top: 1px solid #1f2532; }
-      .code-label { font-size: 11px; letter-spacing: 0.18em; color: #98a2b3; font-weight: 700; }
-      .code { font-size: 18px; letter-spacing: 0.14em; font-weight: 700; color: #f4f3d4; font-variant-numeric: tabular-nums;
-        user-select: all; }
-      .copy { margin-left: auto; padding: 6px 14px; border-radius: 999px; border: 1px solid rgba(244, 243, 212, 0.25);
-        background: transparent; color: #f4f3d4; font: 700 13px "Figtree", system-ui, sans-serif; cursor: pointer; }
+      .code-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 12px;
+        padding: 10px 10px 10px 14px; border-radius: 14px; background: #141925; border: 1px solid #2a3142; }
+      .code-box { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+      .code-label { font-size: 10px; line-height: 1; letter-spacing: 0.16em; color: #98a2b3; font-weight: 700; }
+      .code { font-size: 20px; line-height: 1.1; letter-spacing: 0.12em; font-weight: 700; color: #f4f3d4;
+        font-variant-numeric: tabular-nums; user-select: all; }
+      .copy { flex-shrink: 0; padding: 8px 14px; border-radius: 999px; border: 1px solid rgba(244, 243, 212, 0.25);
+        background: transparent; color: #f4f3d4; font: 700 13px/1 "Figtree", system-ui, sans-serif; cursor: pointer; }
       .copy.done { border-color: rgba(16, 185, 129, 0.55); color: #10b981; }
       .open { display: block; margin-top: 22px; padding: 16px; border-radius: 999px; background: #dc1612; color: #fff;
         font-weight: 700; font-size: 16px; text-decoration: none; }
@@ -191,8 +192,10 @@ function page(lang, T) {
         <p>${T.stepsTitle}</p>
         <p>${T.steps}</p>
         <div class="code-row" id="code-row" hidden>
-          <span class="code-label">${T.codeLabel}</span>
-          <span class="code" id="code"></span>
+          <div class="code-box">
+            <span class="code-label">${T.codeLabel}</span>
+            <span class="code" id="code"></span>
+          </div>
           <button class="copy" id="copy" type="button" hidden>${T.copy}</button>
         </div>
       </div>
