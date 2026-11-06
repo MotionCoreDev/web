@@ -147,6 +147,13 @@
   to = "/support"
   status = 301
 
+# Private duel invites from the app: every /duel/<code> gets the invite page, which carries the link preview tags and
+# opens the room in the app. A rewrite (200), so the address keeps the code for the page's script.
+[[redirects]]
+  from = "/duel/*"
+  to = "/duel/index.html"
+  status = 200
+
 # Must stay last: any path without a file gets the branded, four-language 404 page.
 # (Next.js writes its own unstyled 404.html into out/, so ours has a different name.)
 [[redirects]]
