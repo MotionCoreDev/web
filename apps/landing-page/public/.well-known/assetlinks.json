@@ -1,0 +1,14 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.motioncore.app",
+      "sha256_cert_fingerprints": [
+        "AD:0A:FA:B6:8C:7E:0A:6A:34:7E:4E:72:C2:47:AF:81:F1:71:0C:5A:28:DC:09:1A:63:D7:F8:DB:BF:78:B6:03",
+        "4B:20:93:82:41:E8:42:68:84:6F:C7:BD:75:32:10:9C:8A:DE:ED:3B:9C:7D:4B:5A:26:51:CF:0A:2C:36:3C:D1",
+        "14:E3:F4:4D:3C:A7:66:9A:61:55:39:4C:75:44:1F:B6:F8:D5:64:45:B1:95:9A:91:2A:9A:66:90:18:A2:E3:D9"
+      ]
+    }
+  }
+]

@@ -203,3 +203,11 @@
   for = "/images/*"
   [headers.values]
     Cache-Control = "public, max-age=604800"
+
+# Android App Links: Android fetches this to check that the app may open the duel invite links itself. It must be
+# JSON, reachable without redirects.
+[[headers]]
+  for = "/.well-known/assetlinks.json"
+  [headers.values]
+    Content-Type = "application/json"
+    Access-Control-Allow-Origin = "*"
