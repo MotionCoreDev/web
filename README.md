@@ -5,7 +5,7 @@ the camera-based training app that counts every rep. It hosts the landing page, 
 account deletion request form, the privacy policy and the terms of use, in English, Turkish, German
 and Spanish.
 
-**Live:** https://motioncore.netlify.app
+**Live:** https://motioncore.fit
 
 ## Repository layout
 

@@ -1,5 +1,5 @@
 // Builds the private duel invite pages, one per site language, and their link preview images:
-//   apps/landing-page/public/duel/<lang>/index.html   served for https://motioncore.fit/<lang>/duel/<CODE> (and the old motioncore.netlify.app)
+//   apps/landing-page/public/duel/<lang>/index.html   served for https://motioncore.fit/<lang>/duel/<CODE>
 //   apps/landing-page/public/images/og-duel-<lang>.png  (1200x630)
 // The app shares the link in the sender's language, so WhatsApp, Discord and others show the preview in that language
 // (crawlers do not run scripts, so each language needs its own static page). The image: the app logo large in the

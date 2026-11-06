@@ -4,7 +4,7 @@
  */
 
 /** Netlify sets URL to the site's primary address during builds; local builds fall back to it. */
-const SITE_URL = (process.env.URL ?? "https://motioncore.netlify.app").replace(/\/$/, "");
+const SITE_URL = (process.env.URL ?? "https://motioncore.fit").replace(/\/$/, "");
 
 export const BRAND_CONFIG = {
     name: "MotionCore",
