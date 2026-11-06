@@ -147,6 +147,20 @@
   to = "/support"
   status = 301
 
+# Account deletion requests land in one Netlify dashboard: the second site at motioncore.netlify.app (same repo)
+# sends its deletion page to motioncore.fit, whose site collects the form. Only these pages move, so the duel
+# invite pages and /.well-known/assetlinks.json keep answering on both addresses. Forced, as the pages exist here.
+[[redirects]]
+  from = "https://motioncore.netlify.app/:lang/delete-account/*"
+  to = "https://motioncore.fit/:lang/delete-account/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://motioncore.netlify.app/:lang/delete-account"
+  to = "https://motioncore.fit/:lang/delete-account/"
+  status = 301
+  force = true
+
 # Private duel invites from the app, in the sender's language: every /<lang>/duel/<code> gets that language's invite
 # page (built by scripts/build-duel-invites.mjs), which carries the link preview tags and opens the room in the app.
 # Rewrites (200), so the address keeps the code for the page's script. /duel/<code> without a language came from the
