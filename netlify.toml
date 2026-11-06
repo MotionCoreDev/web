@@ -147,11 +147,29 @@
   to = "/support"
   status = 301
 
-# Private duel invites from the app: every /duel/<code> gets the invite page, which carries the link preview tags and
-# opens the room in the app. A rewrite (200), so the address keeps the code for the page's script.
+# Private duel invites from the app, in the sender's language: every /<lang>/duel/<code> gets that language's invite
+# page (built by scripts/build-duel-invites.mjs), which carries the link preview tags and opens the room in the app.
+# Rewrites (200), so the address keeps the code for the page's script. /duel/<code> without a language came from the
+# first app builds, which were Turkish.
+[[redirects]]
+  from = "/tr/duel/*"
+  to = "/duel/tr/index.html"
+  status = 200
+[[redirects]]
+  from = "/en/duel/*"
+  to = "/duel/en/index.html"
+  status = 200
+[[redirects]]
+  from = "/de/duel/*"
+  to = "/duel/de/index.html"
+  status = 200
+[[redirects]]
+  from = "/es/duel/*"
+  to = "/duel/es/index.html"
+  status = 200
 [[redirects]]
   from = "/duel/*"
-  to = "/duel/index.html"
+  to = "/duel/tr/index.html"
   status = 200
 
 # Must stay last: any path without a file gets the branded, four-language 404 page.
